@@ -4,8 +4,12 @@
     color: gray;
 }
 
-header {
-    color: black;
+h1 {
+    color: rgb(25, 120, 175);
     
 
+}
+
+h2, h3 {
+    color: lightblue;
 }
