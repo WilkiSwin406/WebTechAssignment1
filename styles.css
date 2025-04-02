@@ -14,3 +14,15 @@ h2, h3 {
     color: rgb(175, 215, 230);
 }
 
+label {
+    float: left;
+}
+input {
+    display: flex;
+    justify-content: left;
+}
+
+fieldset {
+    border-color: rgb(175, 215, 230);
+    border-style: solid;
+  }
