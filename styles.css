@@ -1,0 +1,11 @@
+/* universal decliration of the font used as well as the defualt font color of gray*/
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+}
+
+header {
+    color: black;
+    
+
+}
