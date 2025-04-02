@@ -16,8 +16,30 @@
             <a href="application.html">Apply</a>
             <a href="about.html">About</a>
         </nav>
-<form action="" method="post">
+        <br>
+        <br>
+<form action="http://mercury.swin.edu.au/it000000/formtest.php" method="post">
+    <fieldset>
+        <!--the title of the field set is defined by legend-->
+        <legend>Applicant Details</legend>
+        <!-- label is the text connected to an input through the for tag-->
+        <!-- text input with name and id connected for formating and CSS, required tag makes the user fill it out-->
+         <!-- patter tag allows only digits and a max of 25 characters-->
+   
+    <br>
+    <label for="Fname">First Name</label>
+    <input type="text" name="Fname" id="Fname" required="required">
+    <Label for="Lname">Last Name</Label>
+    <input type="text" name="Lname"Lname id="Lname" required="required">
+    <Label for="Email">Email</Label>
+    <input type="text" name="Email"Lname id="Email" required="required">
+    </fieldset>
 
 
+<br>
+    <!-- submits the data entered and then follows the action and method-->
+<input type="submit" value="Apply">
+<!-- resets all the current inputs-->
+<input type="reset" value="reset">
 </form>
 </html>
