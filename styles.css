@@ -14,17 +14,55 @@ h2, h3 {
     color: rgb(175, 215, 230);
 }
 
-label {
-    float: left;
-}
-input {
-    display: flex;
-    justify-content: left;
-}
 
+/*Flynn's Application Page*/
 fieldset {
     border-color: rgb(175, 215, 230);
     border-style: solid;
+    background-color: #acacac ;
+
+  }
+
+legend {
+    padding: 2px;
+    float: left;
+    text-decoration: underline;
+}
+
+label {
+    float: left;
+}
+ 
+
+.text-group {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+  
+  .text-group label {
+    text-align: left;
+    align-self: center;
+  }
+  
+  .text-group input {
+    width: 30%;
+  }
+
+.radio-group {
+    display: flex;
+    gap: 4px; /* space between buttons */
+  }
+  
+  .radio-label {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  
+  .radio-option {
+    accent-color:  rgb(175, 215, 230);
   }
 
 /*Benjamin's About Page*/
@@ -125,3 +163,4 @@ fieldset {
     text-align: right;
     padding-right: 400px;
 }
+

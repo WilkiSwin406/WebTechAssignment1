@@ -18,29 +18,50 @@
         <a href="application.html">Application</a>
         <a href="about.html">About</a>
     </nav>
+</header>
         <br>
         <br>
 <form action="http://mercury.swin.edu.au/it000000/formtest.php" method="post">
     <fieldset>
-        <!--the title of the field set is defined by legend-->
-        <legend>Applicant Details</legend>
-        <!-- label is the text connected to an input through the for tag-->
-        <!-- text input with name and id connected for formating and CSS, required tag makes the user fill it out-->
-         <!-- patter tag allows only digits and a max of 25 characters-->
-   
-    <br>
-    <label for="Fname">First Name|</label>
-    <input type="text" name="Fname" id="Fname" required="required">
-    <br>
-    <Label for="Lname">Last Name|</Label>
-    <input type="text" name="Lname"Lname id="Lname" required="required">
-    <br>
-    <Label for="Email">Email add |</Label>
-    <input type="text" name="Email"Lname id="Email" required="required">
-    <br>
+            <!--the title of the field set is defined by legend-->
+            <legend>Applicant Details</legend>
+            <!-- label is the text connected to an input through the for tag-->
+            <!-- text input with name and id connected for formating and CSS, required tag makes the user fill it out-->
+            <!-- patter tag allows only digits and a max of 25 characters-->
+    
+        <br>
+        <br>
+        <div class="text-group">
+            <label for="Fname">First Name:</label>
+            <input type="text" name="Fname" id="Fname" required="required" pattern="[A-Za-z]+" maxlength="20" minlength="2">
+            <Label for="Lname">Last Name:</Label>
+            <input type="text" name="Lname" id="Lname" required="required" pattern="[A-Za-z]+" maxlength="20" minlength="2">
+            <Label for="Email">Email Address:</Label>
+            <input type="text" name="Email" id="Email" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        </div>
+        <br>
+        <div class="radio-group">
+            <label for="Gender">Gender: </label> <br>
+            <label for="Male" class="radio-label">Male</label>
+            <input type="radio" class="radio-option" name="Gender" id="Male" value="Male"> <option value="1"></option>
+            <label for="Female" class="radio-label">Female</label>
+            <input type="radio"  class="radio-option" name="Gender" id="Female" value="Female"> <option value="2"></option>
+            <label for="Non-Binary" class="radio-label">Non-Binary</label>
+            <input type="radio" class="radio-option"  name="Gender" id="Non-Binary" value="Non-Binary"> <option value="3"></option>
+            <label for="Other" class="radio-label">Other</label>
+            <input type="radio"  class="radio-option" name="Gender" id="Other" value="Other"> <option value="4"></option>
+            <label for="Rather-not-Say" class="radio-label">Rather-not-Say</label>
+            <input type="radio" class="radio-option" name="Gender" id="Rather-not-Say" value="Rather-not-Say"> <option value="5"></option>
+        </div>
+        <br>
+        <div class="text-group">
+            <label for="Date">Date of Birth:</label>
+            <input type="date" name="DOB" id="DOB" required>
+        </div>
     </fieldset>
     <fieldset>
-
+        <legend>Applicant Adress</legend>
+        
     </fieldset>
 
 
