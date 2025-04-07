@@ -33,7 +33,19 @@ label {
     float: left;
 }
  
+.buttons {
+    background-color: #acacac;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 
+}
+
+.buttons:hover {
+    color: rgb(175, 215, 230);
+}
 .text-group {
     display: grid;
     grid-template-columns: 120px 1fr;
@@ -62,6 +74,7 @@ label {
   }
   
   .radio-option {
+    cursor: pointer;
     accent-color:  rgb(175, 215, 230);
   }
 
