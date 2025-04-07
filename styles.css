@@ -97,7 +97,7 @@ label {
 .logo-title {
     display: flex; /*places logo and title next to eachother*/
     align-items: center; /*aligns them centred vertically*/
-    gap: 15px; /*adds a gap between image and title*/
+    gap: 5px; /*adds a gap between image and title*/
 }
 
 /* The actual logo image INSIDE THE HEADER*/
