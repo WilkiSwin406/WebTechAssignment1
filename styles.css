@@ -153,6 +153,11 @@ label {
     padding: 10px 20px;
 }
 
+.right-section ul {
+    padding-left: 0; /* Remove default padding */
+    margin-left: 20px; /* Add a smaller margin to keep bullets visible */
+}
+
 .divider { /* vertical line with spacing left and right*/
     width: 1px;
     background-color: black;
