@@ -20,10 +20,11 @@ fieldset {
     border-color: rgb(175, 215, 230);
     border-style: solid;
     background-color: #acacac ;
-
+    color: black;
   }
 
 legend {
+    color: rgb(25, 120, 175);
     padding: 2px;
     float: left;
     text-decoration: underline;
@@ -54,6 +55,7 @@ label {
   }
   
   .text-group label {
+    color: black;
     text-align: left;
     align-self: center;
   }
@@ -68,6 +70,7 @@ label {
   }
   
   .radio-label {
+    color: black;
     display: flex;
     align-items: center;
     gap: 2px;
