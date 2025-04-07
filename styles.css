@@ -185,3 +185,32 @@ label {
     padding-right: 400px;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+.grid-item {
+    background-color: #e0e0e0;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.grid-item h3 {
+    margin: 0;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.grid-item p {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 5px;
+}
