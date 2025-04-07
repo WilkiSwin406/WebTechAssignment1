@@ -5,58 +5,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About page detailing members of team project">
     <title>About CyberBytes</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <header>
+    <header class="site-header">
+        <div class="logo-title">
+            <img src="images/logo.png" alt="CyberBytes Logo" class="logo-image">
+            <h1>CyberBytes</h1>
+        </div>
 
-        <h1>About Page</h1>
-
-        <nav>
+        <nav class="nav-links">
             <a href="index.html">Index</a>
-            <a href="jobs.html">Job</a>
-            <a href="application.html">Apply</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="application.html">Application</a>
             <a href="about.html">About</a>
         </nav>
-
-        <hr>
-
-        <h2>Group: Swinburne Sigmas</h2>
-        
-        <p>Class: Wednesday 10:30-12:30</p>
-        <p>Tutor: Rahul Raghavan</p>
-
-        <h2>Students:</h2>
-        
-        <ul>    
-            <li>Darcy Doyle - <strong>105920569</strong></li>
-            <li>Flynn Reimers - <strong>105924529</strong></li>
-            <li>Connor Wright - <strong>105748677</strong></li>
-            <li>Benjamin Wilkinson - <strong>105927777</strong></li>
-        </ul>
-
-        <h2>Project Contributors</h2>
-
-        <dl>
-            <dt>Darcy:</dt>
-            <dd>- Index page</dd>
-
-            <dt>Flynn:</dt>
-            <dd>- Job Application page</dd>
-            
-            <dt>Connor:</dt>
-            <dd>- Position descriptions page</dd>
-
-            <dt>Benjamin:</dt>
-            <dd>- About page</dd>
-
-        </dl>
-
     </header>
 
+    <main class="main-content">
+        <section class="info-section single-box">
+            <div class="left-section">
+                <h2>Project Contributors</h2>
+                <dl>
+                    <dt>Darcy:</dt>
+                    <dd>- Index page</dd>
+    
+                    <dt>Flynn:</dt>
+                    <dd>- Job Application page</dd>
+    
+                    <dt>Connor:</dt>
+                    <dd>- Position descriptions page</dd>
+    
+                    <dt>Benjamin:</dt>
+                    <dd>- About page</dd>
+                </dl>
+    
+                <h2>Group: Swinburne Sigmas</h2>
+                <p>Class: Wednesday 10:30-12:30</p>
+                <p>Tutor: Rahul Raghavan</p>
+            </div>
+    
+            <div class="divider"></div>
+    
+            <div class="right-section">
+                <h2>Students</h2>
+                <ul>
+                    <li>Darcy Doyle - <strong>105920569</strong></li>
+                    <li>Flynn Reimers - <strong>105924529</strong></li>
+                    <li>Connor Wright - <strong>105748677</strong></li>
+                    <li>Benjamin Wilkinson - <strong>105927777</strong></li>
+                </ul>
+            </div>
+        </section>
+        
+        
+
+        <section class="image-section">
+            <img src="images/group.png" alt="Group photo" class="actual-image">
+            <p class="caption">Group Photo</p>
+            <p class="names">Darcy, Connor, Benjamin, Flynn</p>
+        </section>
+    </main>
+    
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 /* universal decliration of the font used as well as the defualt font color of gray*/
 *{
     font-family: Arial, Helvetica, sans-serif;
-    color: gray;
+    color: rgb(71, 71, 71);
 }
 
 h1 {
@@ -26,3 +26,102 @@ fieldset {
     border-color: rgb(175, 215, 230);
     border-style: solid;
   }
+
+/*Benjamin's About Page*/
+
+/* Universal Header (USE THIS GUYS)*/
+.site-header {
+    display: flex;
+    align-items: center; /*Vertically centers items within the header*/
+    justify-content: space-between; /*pushes to left and right edges with space between them*/
+    padding: 10px 20px; /*Adds space inside the header 10px to top/bot 20px to L/R*/
+    background-color: #444;
+    border: 2px solid black;
+}
+
+/* Logo title INSIDE THE HEADER*/
+.logo-title {
+    display: flex; /*places logo and title next to eachother*/
+    align-items: center; /*aligns them centred vertically*/
+    gap: 15px; /*adds a gap between image and title*/
+}
+
+/* The actual logo image INSIDE THE HEADER*/
+.logo-image { /*sets image size and keeps aspect ratio intact without cropping*/
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.nav-links { /* sets nav links in a row with 20px inbetween*/
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a { /* makes nav links white and removes the underline*/
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover { /*underline on hover*/
+    text-decoration: underline;
+}
+
+.main-content {/*Top bot, right left, padding to main*/
+    padding: 30px 40px;
+}
+
+.info-section { /*Side by side with space + space betwen and space below*/
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.single-box { 
+    /*light grey flex box with corners, padding and border*/
+    display: flex;
+    background-color: #acacac;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 20px; 
+
+
+    justify-content: start; /* prevents full width expansion */
+    gap: 40px; /* adds space between sections */
+    max-width: 900px; /* set a max width for the entire box, this is for large screens*/
+    margin: auto; /* center the box automatically */
+    margin-bottom: 40px; /* Add a gap between the single box and image*/
+}
+
+.left-section, .right-section {/*Equal width and padding for spacing*/
+    flex: 1;
+    padding: 10px 20px;
+}
+
+.divider { /* vertical line with spacing left and right*/
+    width: 1px;
+    background-color: black;
+    margin: 0 20px;
+}
+
+.image-section {
+    text-align: center;
+}
+
+.actual-image {
+    width: 45%;
+    height: auto;
+    max-height: 400px; /* optional: limit image height */
+    margin: 0 auto;
+    border: 2px solid black;
+    display: block; /* make the image behave like a block to center properly */
+    object-fit: contain;
+}
+
+.caption {
+    margin-top: 10px;
+    font-style: italic;
+    text-align: right;
+    padding-right: 400px;
+}
