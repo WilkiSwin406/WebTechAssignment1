@@ -81,7 +81,14 @@ label {
     accent-color:  rgb(175, 215, 230);
   }
 
+
 /*Benjamin's About Page*/
+
+/* Flex: Refers to the layout mode that arranges elements in a row or column with alignment and spacing features*/
+/* Margin: Refers to Space outside an element, between it and other elements */
+/* Padding: Refers to Space inside and element, between its content and border */
+/* Gap: refers to space between items in a flex or grid container*/
+
 
 /* Universal Header (USE THIS GUYS)*/
 .site-header {
@@ -154,7 +161,7 @@ label {
 }
 
 .right-section ul {
-    padding-left: 0; /* Remove default padding */
+    padding-left: 0; /* Remove default padding due to list element*/
     margin-left: 20px; /* Add a smaller margin to keep bullets visible */
 }
 
@@ -169,10 +176,9 @@ label {
 }
 
 .actual-image {
-    width: 45%;
+    width: 40%;
     height: auto;
-    max-height: 400px; /* optional: limit image height */
-    margin: 0 auto;
+    margin: 0 auto; /* centres image horizontally*/
     border: 2px solid black;
     display: block; /* make the image behave like a block to center properly */
     object-fit: contain;
@@ -182,7 +188,7 @@ label {
     margin-top: 10px;
     font-style: italic;
     text-align: right;
-    padding-right: 400px;
+    padding-right: 520px;
 }
 
 .grid-container {
