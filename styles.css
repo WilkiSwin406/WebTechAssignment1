@@ -259,6 +259,7 @@ table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
     border-spacing: 150px 100px;
+    background-color: rgb(158, 206, 255);
   }
 
 .table-box { 
