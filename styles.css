@@ -65,8 +65,14 @@ label {
   }
 
   .text-group select {
-    width: 30%;
+    width: 31%;
     color: black;
+    cursor: pointer;
+  }
+  
+  .text-group option {
+    text-align: left;
+    align-self: center;
   }
 
 .radio-group {
