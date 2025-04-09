@@ -221,3 +221,61 @@ label {
     font-size: 1.1em;
     margin-top: 5px;
 }
+
+/* Connor's Jobs Page */
+
+
+.jobs-tiles {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.jobs-body {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.jobs-descriptions {
+    background-color: #acacac;
+    border: 1px solid black;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.15s linear;
+}
+
+/* The code below adds color transition effects when you hover over the job descriptor tiles */
+
+.jobs-descriptions p {
+    transition: color 0.15s linear;
+}
+
+.jobs-descriptions li {
+    transition: color 0.15s linear;
+}
+
+.jobs-descriptions:hover {
+    background-color: rgb(25, 120, 175);
+    cursor: pointer;    
+}
+
+.jobs-descriptions:hover p {
+    color: white;
+}
+
+.jobs-descriptions:hover li {
+    color:white;
+}
+
+.home-box{
+    background-color: #acacac;
+    border: 1px solid black;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 5px;
+    border-radius: 5px;
+}
