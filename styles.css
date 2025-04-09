@@ -64,6 +64,11 @@ label {
     width: 30%;
   }
 
+  .text-group select {
+    width: 30%;
+    color: black;
+  }
+
 .radio-group {
     display: flex;
     gap: 4px; /* space between buttons */
