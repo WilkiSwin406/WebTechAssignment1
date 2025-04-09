@@ -280,11 +280,18 @@ label {
     border-radius: 5px;
 }
 
+.home-images{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .home-about{
     background-image: url(images/group.png);
 }
 
 .home-jobs{
-    background-image: url(images/home-jobs.jpg)
+    background-image: url(images/home-jobs.jpg);/*Photo by headway on unisplash*/
+}
+.home-application{
+    background-image: url(images/home-application.jpg);/*Photo by Leon Dewiw on Unsplash*/
 }
       
