@@ -23,6 +23,19 @@ fieldset {
     color: black;
   }
 
+fieldset:hover {
+    background-color: rgb(147, 170, 179);
+    border-color: black;
+}
+
+fieldset:hover label {
+    color: white;
+}
+
+fieldset:hover legend {
+    color: black;
+}
+
 legend {
     color: rgb(25, 120, 175);
     padding: 2px;
@@ -85,6 +98,13 @@ label {
     display: flex;
     align-items: center;
     gap: 2px;
+  }
+
+  .radio-label-2 {
+    color: black;
+    text-align: left;
+    align-self: center;
+    width: 10%;
   }
   
   .radio-option {
