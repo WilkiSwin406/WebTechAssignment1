@@ -290,6 +290,28 @@ label {
       
 aside {
     float: right;
-    border: 1px solid red;
+    border: 1px solid grey;
+    border-radius: 2pt;
     width: 25%;
+    padding: 10pt;
+    margin: 10pt;
+    background-color: rgb(175, 215, 230);
+}
+
+aside h3 {
+    font-size: 24pt;
+    color: black;
+}
+
+#cybit {
+    background-color: white;  
+}
+
+#cybit textarea {
+    font-size: 24pt;
+    border: none;
+}
+
+#cybit h4 {
+    color: red;
 }
