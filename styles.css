@@ -148,7 +148,7 @@ label {
     padding: 20px; 
 
 
-    justify-content: start; /* prevents full width expansion */
+    justify-content: start; /* places the element at the start / left */
     gap: 40px; /* adds space between sections */
     max-width: 900px; /* set a max width for the entire box, this is for large screens*/
     margin: auto; /* center the box automatically */
