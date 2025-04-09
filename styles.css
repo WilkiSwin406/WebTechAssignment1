@@ -130,6 +130,7 @@ label {
 }
 
 .nav-links a:hover { /*underline on hover*/
+    color: rgb(175, 215, 230);
     text-decoration: underline;
 }
 
