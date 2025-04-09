@@ -65,7 +65,7 @@ label {
   }
 
   .text-group select {
-    width: 31%;
+    width: 30.8%;
     color: black;
     cursor: pointer;
   }
@@ -92,7 +92,22 @@ label {
     accent-color:  rgb(175, 215, 230);
   }
 
+  .input-check label {
+    color: black;
+    text-align: left;
+    align-self: center;
+    width: 22%;
+    clear: both;
+    display: inline-block;
+    overflow: scroll;
+    white-space: nowrap;
+  }
 
+.input-check input {
+    align-content: center;
+    accent-color:  rgb(175, 215, 230);
+    cursor: pointer;
+}
 /*Benjamin's About Page*/
 
 /* Flex: Refers to the layout mode that arranges elements in a row or column with alignment and spacing features*/
