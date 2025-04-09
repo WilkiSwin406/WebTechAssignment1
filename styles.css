@@ -269,6 +269,36 @@ label {
     margin-top: 5px;
 }
 
+.table {
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid black;    
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 150px 100px;
+    background-color: rgb(158, 206, 255);
+  }
+
+.table-box { 
+    /*light grey flex box with corners, padding and border*/
+    display: flex;
+    background-color: #acacac;
+    border: 1px solid black;
+    border-radius: 15px;
+
+    padding: 50px;
+    justify-content: start; /* places the element at the start / left */
+    max-width: 900px; /* set a max width for the entire box, this is for large screens*/
+    margin: auto; /* center the box automatically */
+    margin-bottom: 40px; /* Add a gap between the single box and image*/
+}
+
+.big-text {
+    font-size: 3em;
+}
 /* Connor's Jobs Page */
 
 
@@ -347,6 +377,7 @@ label {
 }
 .home-application{
     background-image: url(images/home-application.jpg);/*Photo by Leon Dewiw on Unsplash*/
+    background-position: 100%;
 }
       
 aside {
