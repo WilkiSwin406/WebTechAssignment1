@@ -23,6 +23,19 @@ fieldset {
     color: black;
   }
 
+fieldset:hover {
+    background-color: rgb(147, 170, 179);
+    border-color: black;
+}
+
+fieldset:hover label {
+    color: white;
+}
+
+fieldset:hover legend {
+    color: black;
+}
+
 legend {
     color: rgb(25, 120, 175);
     padding: 2px;
@@ -64,6 +77,17 @@ label {
     width: 30%;
   }
 
+  .text-group select {
+    width: 30.8%;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .text-group option {
+    text-align: left;
+    align-self: center;
+  }
+
 .radio-group {
     display: flex;
     gap: 4px; /* space between buttons */
@@ -75,13 +99,35 @@ label {
     align-items: center;
     gap: 2px;
   }
+
+  .radio-label-2 {
+    color: black;
+    text-align: left;
+    align-self: center;
+    width: 10%;
+  }
   
   .radio-option {
     cursor: pointer;
     accent-color:  rgb(175, 215, 230);
   }
 
+  .input-check label {
+    color: black;
+    text-align: left;
+    align-self: center;
+    width: 22%;
+    clear: both;
+    display: inline-block;
+    overflow: scroll;
+    white-space: nowrap;
+  }
 
+.input-check input {
+    align-content: center;
+    accent-color:  rgb(175, 215, 230);
+    cursor: pointer;
+}
 /*Benjamin's About Page*/
 
 /* Flex: Refers to the layout mode that arranges elements in a row or column with alignment and spacing features*/
@@ -125,6 +171,7 @@ label {
 }
 
 .nav-links a:hover { /*underline on hover*/
+    color: rgb(175, 215, 230);
     text-decoration: underline;
 }
 
@@ -148,7 +195,7 @@ label {
     padding: 20px; 
 
 
-    justify-content: start; /* prevents full width expansion */
+    justify-content: start; /* places the element at the start / left */
     gap: 40px; /* adds space between sections */
     max-width: 900px; /* set a max width for the entire box, this is for large screens*/
     margin: auto; /* center the box automatically */
@@ -222,6 +269,36 @@ label {
     margin-top: 5px;
 }
 
+.table {
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid black;    
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 150px 100px;
+    background-color: rgb(158, 206, 255);
+  }
+
+.table-box { 
+    /*light grey flex box with corners, padding and border*/
+    display: flex;
+    background-color: #acacac;
+    border: 1px solid black;
+    border-radius: 15px;
+
+    padding: 50px;
+    justify-content: start; /* places the element at the start / left */
+    max-width: 900px; /* set a max width for the entire box, this is for large screens*/
+    margin: auto; /* center the box automatically */
+    margin-bottom: 40px; /* Add a gap between the single box and image*/
+}
+
+.big-text {
+    font-size: 3em;
+}
 /* Connor's Jobs Page */
 
 
@@ -280,12 +357,27 @@ label {
     border-radius: 5px;
 }
 
+.home-container{
+    display: flex;
+}
+
+.home-images{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30%;
+    
+}
 .home-about{
     background-image: url(images/group.png);
 }
 
 .home-jobs{
-    background-image: url(images/home-jobs.jpg)
+    background-image: url(images/home-jobs.jpg);/*Photo by headway on unisplash*/
+    background-position: 100%;
+}
+.home-application{
+    background-image: url(images/home-application.jpg);/*Photo by Leon Dewiw on Unsplash*/
+    background-position: 100%;
 }
       
 aside {

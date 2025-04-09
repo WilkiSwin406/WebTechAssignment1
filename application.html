@@ -41,16 +41,16 @@
         </div>
         <br>
         <div class="radio-group">
-            <label for="Gender" class="radio-label">Gender: </label> <br>
+            <label for="Gender" class="radio-label-2">Gender: </label> <br>
             <label for="Male" class="radio-label">Male</label>
             <input type="radio" class="radio-option" name="Gender" id="Male" value="Male"> <option value="1"></option>
-            <label for="Female" class="radio-label">Female</label>
+            <label for="Female" class="radio-label">| Female</label>
             <input type="radio"  class="radio-option" name="Gender" id="Female" value="Female"> <option value="2"></option>
-            <label for="Non-Binary" class="radio-label">Non-Binary</label>
+            <label for="Non-Binary" class="radio-label">| Non-Binary</label>
             <input type="radio" class="radio-option"  name="Gender" id="Non-Binary" value="Non-Binary"> <option value="3"></option>
-            <label for="Other" class="radio-label">Other</label>
+            <label for="Other" class="radio-label">| Other</label>
             <input type="radio"  class="radio-option" name="Gender" id="Other" value="Other"> <option value="4"></option>
-            <label for="Rather-not-Say" class="radio-label">Rather-not-Say</label>
+            <label for="Rather-not-Say" class="radio-label">| Rather not Say</label>
             <input type="radio" class="radio-option" name="Gender" id="Rather-not-Say" value="Rather-not-Say"> <option value="5"></option>
         </div>
         <br>
@@ -61,25 +61,63 @@
     </fieldset>
     <fieldset>
         <legend>Applicant Adress</legend>
+            <br>
+            <br>
             <div class="text-group">
-            <label for="Street">Street:</label>
-            <input type="text" name="Street" id="Street" required="required" pattern="[A-Za-z0-9.]+" maxlength="40">
-            <label for="Suburb">Suburb:</label>
-            <input type="text" name="Suburb" id="Suburb" required="required" pattern="[A-Za-z.]+" maxlength="40">
-            <label for="State">State:</label>
-            <select name="State" id="State">
-            </div>
-            <div>
-                <option value="VIC">VIC</option>
-                <option value="NSW">NSW</option>
-                <option value="QLD">QLD</option>
-                <option value="NT">NT</option>
-                <option value="WA">WA</option>
-                <option value="SA">SA</option>
-                <option value="TAS">TAS</option>
-                <option value="ACT">ACT</option>
+                <label for="Street">Street:</label>
+                <input type="text" name="Street" id="Street" required="required" maxlength="40">
+                <label for="Suburb">Suburb:</label>
+                <input type="text" name="Suburb" id="Suburb" required="required" pattern="[A-Za-z.]+" maxlength="40">
+                <label for="Postcode">Postcode:</label>
+                <input type="text" name="Postcode" id="Postcode" required="required" pattern="[0-9]{4}">
+                <label for="Phone">Phone Number:</label>
+                <input type="text" name="Phone" id="Phone" required="required" pattern="[0-9]{8-12}">
+                <label for="State">State:</label>
+                <select name="State" id="State">
+                    <option value="ACT">ACT</option>
+                    <option value="NSW">NSW</option>
+                    <option value="NT">NT</option>
+                    <option value="QLD">QLD</option>
+                    <option value="SA">SA</option>
+                    <option value="TAS">TAS</option>
+                    <option value="VIC">VIC</option>
+                    <option value="WA">WA</option>
               </select>
             </div>
+    </fieldset>
+    <fieldset>
+        <legend>Jobs Selection</legend>
+        <br><br>
+        <div class="text-group">
+            <label for="Job">Job:</label>
+                <select name="Job" id="Job">
+                <option value="CLE01">CLE01</option>
+                <option value="DBE01">DBE01</option>
+                <option value="DTA02">DTA02</option>
+                <option value="UXD01">UXD01</option>
+              </select>
+        </div>
+        <div class="input-check">
+            <h3>Applicant Skills</h3>
+              <label for="Cloud-Platform">Cloud Platform Knowledge</label>
+              <input type="checkbox" id="Cloud-Platform" name="Cloud-Platform" value="Cloud-Platform"> <br>
+              <label for="Networking">Digital Networking Knowledge</label>
+              <input type="checkbox" id="Networking" name="Networking" value="Networking"> <br>
+              <label for="Security">Digital Security Knowledge</label>
+              <input type="checkbox" id="Security" name="Security" value="Security"> <br>
+              <label for="Virtualisation">Virtualisation</label>
+              <input type="checkbox" id="Virtualisation" name="Virtualisation" value="Virtualisation"> <br>
+              <label for="Programing">Programing</label>
+              <input type="checkbox" id="Programing" name="Programing" value="Programing"> <br>
+              <label for="Database">Data Base Creation & Management</label>
+              <input type="checkbox" id="Database" name="Database" value="Database"> <br>
+              <label for="Automation-Tools">Automation Tools</label>
+              <input type="checkbox" id="Automation-Tools" name="Automation-Tools" value="Automation-Tools"> <br>
+              <label for="UI-UX">UI & UX understanding</label>
+              <input type="checkbox" id="UI-UX" name="UI-UX" value="UI-UX"> <br>
+              <Label for="Other-skills">Other Skills</Label>
+              <textarea name="Other-skills" id="Other-skills"></textarea>
+        </div>
     </fieldset>
 
 
