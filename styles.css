@@ -278,3 +278,9 @@ label {
     margin: 5px;
     border-radius: 5px;
 }
+
+aside {
+    float: right;
+    border: 1px solid red;
+    width: 25%;
+}
