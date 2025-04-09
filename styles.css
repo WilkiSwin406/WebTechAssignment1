@@ -312,6 +312,7 @@ label {
 }
 .home-application{
     background-image: url(images/home-application.jpg);/*Photo by Leon Dewiw on Unsplash*/
+    background-position: 100%;
 }
       
 aside {
