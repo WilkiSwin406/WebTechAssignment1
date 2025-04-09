@@ -61,7 +61,25 @@
     </fieldset>
     <fieldset>
         <legend>Applicant Adress</legend>
-        
+            <div class="text-group">
+            <label for="Street">Street:</label>
+            <input type="text" name="Street" id="Street" required="required" pattern="[A-Za-z0-9.]+" maxlength="40">
+            <label for="Suburb">Suburb:</label>
+            <input type="text" name="Suburb" id="Suburb" required="required" pattern="[A-Za-z.]+" maxlength="40">
+            <label for="State">State:</label>
+            <select name="State" id="State">
+            </div>
+            <div>
+                <option value="VIC">VIC</option>
+                <option value="NSW">NSW</option>
+                <option value="QLD">QLD</option>
+                <option value="NT">NT</option>
+                <option value="WA">WA</option>
+                <option value="SA">SA</option>
+                <option value="TAS">TAS</option>
+                <option value="ACT">ACT</option>
+              </select>
+            </div>
     </fieldset>
 
 
