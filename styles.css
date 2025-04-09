@@ -86,7 +86,7 @@ label {
 
 /* Flex: Refers to the layout mode that arranges elements in a row or column with alignment and spacing features*/
 /* Margin: Refers to Space outside an element, between it and other elements */
-/* Padding: Refers to Space inside and element, between its content and border */
+/* Padding: Refers to Space inside an element, between its content and border */
 /* Gap: refers to space between items in a flex or grid container*/
 
 
@@ -144,7 +144,7 @@ label {
     display: flex;
     background-color: #acacac;
     border: 1px solid black;
-    border-radius: 8px;
+    border-radius: 15px;
     padding: 20px; 
 
 
@@ -155,8 +155,8 @@ label {
     margin-bottom: 40px; /* Add a gap between the single box and image*/
 }
 
-.left-section, .right-section {/*Equal width and padding for spacing*/
-    flex: 1;
+.left-section, .right-section {/*Equal width and padding for spacing of all columns*/
+    flex: 1; 
     padding: 10px 20px;
 }
 
@@ -184,7 +184,7 @@ label {
     object-fit: contain;
 }
 
-.caption {
+.caption { /*This is the image caption*/
     margin-top: 10px;
     font-style: italic;
     text-align: right;
@@ -201,13 +201,14 @@ label {
 .grid-item {
     background-color: #e0e0e0;
     border: 1px solid black;
-    border-radius: 8px;
-    padding: 20px;
+    border-radius: 15px;
+    padding: 50px;
     text-align: center;
     font-family: Arial, sans-serif;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 
+/*This is specific semantic tags inside the grid-item elements*/
 .grid-item h3 {
     margin: 0;
     font-size: 1.2em;
