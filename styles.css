@@ -293,3 +293,8 @@ label {
     background-image: url(images/home-jobs.jpg)
 }
       
+aside {
+    float: right;
+    border: 1px solid red;
+    width: 25%;
+}
