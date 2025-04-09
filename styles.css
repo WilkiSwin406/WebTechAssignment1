@@ -307,12 +307,26 @@ label {
     border-radius: 5px;
 }
 
+.home-container{
+    display: flex;
+}
+
+.home-images{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30%;
+    
+}
 .home-about{
     background-image: url(images/group.png);
 }
 
 .home-jobs{
-    background-image: url(images/home-jobs.jpg)
+    background-image: url(images/home-jobs.jpg);/*Photo by headway on unisplash*/
+    background-position: 100%;
+}
+.home-application{
+    background-image: url(images/home-application.jpg);/*Photo by Leon Dewiw on Unsplash*/
 }
       
 aside {
