@@ -64,6 +64,17 @@ label {
     width: 30%;
   }
 
+  .text-group select {
+    width: 31%;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .text-group option {
+    text-align: left;
+    align-self: center;
+  }
+
 .radio-group {
     display: flex;
     gap: 4px; /* space between buttons */
@@ -125,6 +136,7 @@ label {
 }
 
 .nav-links a:hover { /*underline on hover*/
+    color: rgb(175, 215, 230);
     text-decoration: underline;
 }
 
@@ -148,7 +160,7 @@ label {
     padding: 20px; 
 
 
-    justify-content: start; /* prevents full width expansion */
+    justify-content: start; /* places the element at the start / left */
     gap: 40px; /* adds space between sections */
     max-width: 900px; /* set a max width for the entire box, this is for large screens*/
     margin: auto; /* center the box automatically */
@@ -295,3 +307,8 @@ label {
     background-image: url(images/home-application.jpg);/*Photo by Leon Dewiw on Unsplash*/
 }
       
+aside {
+    float: right;
+    border: 1px solid red;
+    width: 25%;
+}

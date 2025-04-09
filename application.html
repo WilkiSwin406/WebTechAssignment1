@@ -61,15 +61,17 @@
     </fieldset>
     <fieldset>
         <legend>Applicant Adress</legend>
+            <br>
+            <br>
             <div class="text-group">
-            <label for="Street">Street:</label>
-            <input type="text" name="Street" id="Street" required="required" pattern="[A-Za-z0-9.]+" maxlength="40">
-            <label for="Suburb">Suburb:</label>
-            <input type="text" name="Suburb" id="Suburb" required="required" pattern="[A-Za-z.]+" maxlength="40">
-            <label for="State">State:</label>
-            <select name="State" id="State">
-            </div>
-            <div>
+                <label for="Street">Street:</label>
+                <input type="text" name="Street" id="Street" required="required" maxlength="40">
+                <label for="Suburb">Suburb:</label>
+                <input type="text" name="Suburb" id="Suburb" required="required" pattern="[A-Za-z.]+" maxlength="40">
+                <label for="Postcode">Postcode:</label>
+                <input type="text" name="Postcode" id="Postcode" required="required" pattern="[0-9]{4}">
+                <label for="State">State:</label>
+                <select name="State" id="State">
                 <option value="VIC">VIC</option>
                 <option value="NSW">NSW</option>
                 <option value="QLD">QLD</option>
@@ -80,6 +82,19 @@
                 <option value="ACT">ACT</option>
               </select>
             </div>
+    </fieldset>
+    <fieldset>
+        <legend>Jobs Selection</legend>
+        <br><br>
+        <div class="text-group">
+            <label for="Job">Job:</label>
+                <select name="Job" id="Job">
+                <option value="CLE01">CLE01</option>
+                <option value="DBE01">DBE01</option>
+                <option value="DTA02">DTA02</option>
+                <option value="UXD01">UXD01</option>
+              </select>
+        </div>
     </fieldset>
 
 
