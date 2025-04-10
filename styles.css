@@ -19,66 +19,68 @@ h2, h3 h4 {
 
 /*Flynn's Application Page*/
 
-fieldset {
-    border-color: rgb(175, 215, 230);
-    border-style: solid;
-    background-color: #acacac ;
-    color: black;
+/* any text to the left of a pair of {} means that it is in refrence to a piece of code in the html documents*/
+
+fieldset { 
+    border-color: rgb(175, 215, 230); /* make the color of the border that specified rgb value*/
+    border-style: solid; /* make the border a solid color */
+    background-color: #acacac ; /* make the background color of the fieldset ... */
+    color: black; /* make the font color black */
   }
 
-fieldset:hover {
+fieldset:hover { /* when hovering over a fieldset change he background and border color */
     background-color: rgb(147, 170, 179);
     border-color: black;
 }
 
-fieldset:hover label {
+fieldset:hover label { /* when hovering over a fieldset make the labels font color white*/
     color: white;
 }
 
-fieldset:hover legend {
-    color: black;
+fieldset:hover legend { /* when hovering over the fieldset make the legends font color black*/
+    color: black; 
 }
 
-legend {
-    color: rgb(25, 120, 175);
-    padding: 2px;
-    float: left;
-    text-decoration: underline;
-    cursor: default;
+legend { /* general rule for all legends inside of fieldsets */
+    color: rgb(25, 120, 175); /* default font color */
+    padding: 2px; /* add space around it */
+    float: left; /* move it to the left side of the area */
+    text-decoration: underline; /* make the text underlined */
+    cursor: default; /* when hovering over it make the cursor the default cursor instead of the text cursor for UX reasons */
 }
 
-label {
-    float: left;
+label { /* move labels to the left side of the page */
+    float: left; 
 }
  
-.buttons {
+.buttons { /* the . signifies that this is a class which can be called upon in the html documents */
     background-color: #acacac;
     color: black;
-    border: none;
+    border: none; /* make no border on the buttons*/
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 5px; /* make the edges rounded */
     cursor: pointer;
 
 }
 
 .buttons:hover {
-    color: rgb(175, 215, 230);
+    color: rgb(175, 215, 230); /* chage the font color when the user hovers over the buttons */
 }
 .text-group {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    row-gap: 10px;
+    display: grid; /* make the class elements display as a grid*/
+    grid-template-columns: 120px 1fr; /*these are the set values of the grid */
+    row-gap: 10px; /* space both the rows and collumn's by 10 pixels*/
     column-gap: 10px;
   }
   
   .text-group label {
     color: black;
-    text-align: left;
-    align-self: center;
+    text-align: left; /* move all text to the left */
+    align-self: center; /* allight elements to the centre*/
   }
   
   .text-group input {
-    width: 30%;
+    width: 30%; /*make it 30% of the width of the row on the page */
   }
 
   .text-group select {
@@ -93,8 +95,8 @@ label {
   }
 
 .radio-group {
-    display: flex;
-    gap: 4px; /* space between buttons */
+    display: flex; /* allow the elements to be flexible in their positioning on the page */
+    gap: 4px; /* space between buttons of 4 pixels */
   }
   
   .radio-label {
@@ -113,17 +115,17 @@ label {
   
   .radio-option {
     cursor: pointer;
-    accent-color:  rgb(175, 215, 230);
+    accent-color:  rgb(175, 215, 230); /* make the color of the radio buttons to the set rgb value*/
   }
   .input-check label {
     color: black;
     text-align: left;
     align-self: center;
     width: 22%;
-    clear: both;
-    display: inline-block;
-    overflow: scroll;
-    white-space: nowrap;
+    clear: both; /* makes sure both sides of the elements are empty */
+    display: inline-block; /* show them inline with one another and blocked */ 
+    overflow: scroll; /* if there is spare text that cannot be showed on the whole page due to viewing size allow the user to scroll through the text*/
+    white-space: nowrap; /*dont wrap the white space on the row */
     font-size: smaller;
   }
 
@@ -139,7 +141,7 @@ label {
 }
 
 .input-check ::placeholder  {
-    font-size: x-small ;
+    font-size: x-small ; /*for placeholder tags in the input-check class, make the font size extra small */
 }
 /*Benjamin's About Page*/
 
