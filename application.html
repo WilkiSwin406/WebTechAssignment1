@@ -38,7 +38,7 @@
             <Label for="Lname">Last Name:</Label>
             <input type="text" name="Lname" id="Lname" required="required" pattern="[A-Za-z]+" maxlength="20" minlength="2">
             <Label for="Email">Email Address:</Label>
-            <input type="text" name="Email" id="Email" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            <input type="text" name="Email" id="Email" required="required" placeholder="eg. Darcy@Coolfirstname.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
         </div>
         <br>
         <div class="radio-group">
@@ -61,18 +61,18 @@
         </div>
     </fieldset>
     <fieldset>
-        <legend>Applicant Adress</legend>
+        <legend>Applicant Address</legend>
             <br>
             <br>
             <div class="text-group">
                 <label for="Street">Street:</label>
-                <input type="text" name="Street" id="Street" required="required" maxlength="40">
+                <input type="text" name="Street" id="Street" required="required" placeholder="eg. 12 Street St, apt 3" pattern="^[0-9]{1,6}\s+[A-Za-z\s]+$" maxlength="40" >
                 <label for="Suburb">Suburb:</label>
                 <input type="text" name="Suburb" id="Suburb" required="required" pattern="[A-Za-z.]+" maxlength="40">
                 <label for="Postcode">Postcode:</label>
                 <input type="text" name="Postcode" id="Postcode" required="required" pattern="[0-9]{4}">
                 <label for="Phone">Phone Number:</label>
-                <input type="text" name="Phone" id="Phone" required="required" pattern="[0-9]{8-12}">
+                <input type="text" name="Phone" id="Phone" required="required" placeholder="#No Spaces or Country Tags" pattern="[0-9]{8-12}">
                 <label for="State">State:</label>
                 <select name="State" id="State">
                     <option value="ACT">ACT</option>
@@ -99,7 +99,7 @@
               </select>
         </div>
         <div class="input-check">
-            <h3>Applicant Skills</h3>
+            <h4>Applicant Skills</h4>
               <label for="Cloud-Platform">Cloud Platform Knowledge</label>
               <input type="checkbox" id="Cloud-Platform" name="Cloud-Platform" value="Cloud-Platform"> <br>
               <label for="Networking">Digital Networking Knowledge</label>
@@ -108,16 +108,16 @@
               <input type="checkbox" id="Security" name="Security" value="Security"> <br>
               <label for="Virtualisation">Virtualisation</label>
               <input type="checkbox" id="Virtualisation" name="Virtualisation" value="Virtualisation"> <br>
-              <label for="Programing">Programing</label>
-              <input type="checkbox" id="Programing" name="Programing" value="Programing"> <br>
+              <label for="Programming">Programming</label>
+              <input type="checkbox" id="Programming" name="Programming" value="Programming"> <br>
               <label for="Database">Data Base Creation & Management</label>
               <input type="checkbox" id="Database" name="Database" value="Database"> <br>
               <label for="Automation-Tools">Automation Tools</label>
               <input type="checkbox" id="Automation-Tools" name="Automation-Tools" value="Automation-Tools"> <br>
               <label for="UI-UX">UI & UX understanding</label>
-              <input type="checkbox" id="UI-UX" name="UI-UX" value="UI-UX"> <br>
+              <input type="checkbox" id="UI-UX" name="UI-UX" value="UI-UX" > <br>
               <Label for="Other-skills">Other Skills</Label>
-              <textarea name="Other-skills" id="Other-skills"></textarea>
+              <textarea name="Other-skills" id="Other-skills"  placeholder="#Comma separated list"></textarea>
         </div>
     </fieldset>
 
@@ -126,9 +126,9 @@
     <!-- submits the data entered and then follows the action and method-->
 <input type="submit" class="buttons"value="Apply">
 <!-- resets all the current inputs-->
-<input type="reset" class="buttons" value="reset">
+<input type="reset" class="buttons" value="Reset">
 </form>
-
+ <br><br>
 <footer class="site-footer">
     <p>Copyright 2025, The Swinburne Sigmas. All rights reserved.</p>
     <a href="jira.com">The Swinburne Sigmas Jira Project</a>
