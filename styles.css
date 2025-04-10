@@ -365,11 +365,14 @@ table, th, td {
     background-repeat: no-repeat;
     background-size: cover;
     width: 30%;
-    
 }
 .home-about{
     background-image: url(images/group.png);
 }
+.home-about::before{
+    opacity: 30%;
+}
+
 
 .home-jobs{
     background-image: url(images/home-jobs.jpg);/*Photo by headway on unisplash*/
