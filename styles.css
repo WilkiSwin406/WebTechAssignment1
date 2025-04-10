@@ -202,45 +202,75 @@ label {
     margin-bottom: 40px; /* Add a gap between the single box and image*/
 }
 
-.left-section, .right-section {/*Equal width and padding for spacing of all columns*/
-    flex: 1; 
-    padding: 10px 20px;
+.hidden-box {
+    display: flex;
+    gap: 20px;
+    
 }
 
-.right-section ul {
-    padding-left: 0; /* Remove default padding due to list element*/
-    margin-left: 20px; /* Add a smaller margin to keep bullets visible */
+.leftbox { 
+    /*light grey flex box with corners, padding and border*/
+    width: 25%;
+    background-color: #acacac;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 20px; 
+    margin-bottom: 40px;
 }
 
-.divider { /* vertical line with spacing left and right*/
-    width: 1px;
-    background-color: black;
-    margin: 0 20px;
+.rightbox { 
+    /*light grey flex box with corners, padding and border*/
+    width: 75%;
+    background-color: #acacac;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 20px; 
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 40px;
 }
 
 .image-section {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.id-section {
+    border:1px solid #333;
+}
+
+.caption-center {
     text-align: center;
+    margin-top: 8px;
+    font-style: italic;
+    font-size: 1rem;
+    color: #333;
+}
+
+.caption-right {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 4px;
 }
 
 .actual-image {
-    width: 40%;
-    height: auto;
-    margin: 0 auto; /* centres image horizontally*/
-    border: 2px solid black;
-    display: block; /* make the image behave like a block to center properly */
-    object-fit: contain;
-}
-
-.caption { /*This is the image caption*/
-    margin-top: 10px;
-    font-style: italic;
-    text-align: right;
-    padding-right: 520px;
+    float: right;
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 2px solid #333 ;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     width: 100%;
 }
@@ -279,8 +309,7 @@ table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
     border-spacing: 150px 100px;
-    background-color: rgb(175, 215, 230);
-  }
+}
 
 .table-box { 
     /*light grey flex box with corners, padding and border*/
@@ -294,6 +323,45 @@ table, th, td {
     max-width: 900px; /* set a max width for the entire box, this is for large screens*/
     margin: auto; /* center the box automatically */
     margin-bottom: 40px; /* Add a gap between the single box and image*/
+}
+
+/* background transition */
+.table tr {
+    background-color: rgb(175, 215, 230);
+    transition: background-color 0.3s ease;
+}
+
+.ben-row:hover {
+    background-color: #8e43ff;
+}
+
+.connor-row:hover {
+    background-color: #b9b9ff;
+
+}
+
+.darcy-row:hover {
+    background-color: #00bfff;
+}
+
+.flynn-row:hover {
+    background-color: #572325;
+}
+
+.ben-row:hover td {
+    color: white;
+}
+
+.connor-row:hover td {
+    color: black;
+}
+
+.darcy-row:hover td {
+    color: black;
+}
+
+.flynn-row:hover td {
+    color: white;
 }
 
 .big-text {
@@ -396,17 +464,42 @@ aside {
 aside h3 {
     font-size: 24pt;
     color: black;
+    text-align: center;
 }
 
-#cybit {
-    background-color: white;  
+.site-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #444;
+    border-top: 2px solid black;
+    font-size: 10pt;
+    width: 100%;
 }
 
-#cybit textarea {
-    font-size: 24pt;
-    border: none;
+.site-footer p {
+    color: white;
 }
 
-#cybit h4 {
-    color: red;
+.site-footer a {
+    color: white;
+}
+
+.site-footer-sticky {
+    text-align: center;
+    padding: 10px;
+    background-color: #444;
+    border-top: 2px solid black;
+    font-size: 10pt;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.site-footer-sticky p {
+    color: white;
+}
+
+.site-footer-sticky a {
+    color: white;
 }
