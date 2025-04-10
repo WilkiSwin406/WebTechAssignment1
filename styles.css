@@ -202,45 +202,75 @@ label {
     margin-bottom: 40px; /* Add a gap between the single box and image*/
 }
 
-.left-section, .right-section {/*Equal width and padding for spacing of all columns*/
-    flex: 1; 
-    padding: 10px 20px;
+.hidden-box {
+    display: flex;
+    gap: 20px;
+    
 }
 
-.right-section ul {
-    padding-left: 0; /* Remove default padding due to list element*/
-    margin-left: 20px; /* Add a smaller margin to keep bullets visible */
+.leftbox { 
+    /*light grey flex box with corners, padding and border*/
+    width: 25%;
+    background-color: #acacac;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 20px; 
+    margin-bottom: 40px;
 }
 
-.divider { /* vertical line with spacing left and right*/
-    width: 1px;
-    background-color: black;
-    margin: 0 20px;
+.rightbox { 
+    /*light grey flex box with corners, padding and border*/
+    width: 75%;
+    background-color: #acacac;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 20px; 
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 40px;
 }
 
 .image-section {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.id-section {
+    border:1px solid #333;
+}
+
+.caption-center {
     text-align: center;
+    margin-top: 8px;
+    font-style: italic;
+    font-size: 1rem;
+    color: #333;
+}
+
+.caption-right {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 4px;
 }
 
 .actual-image {
-    width: 40%;
-    height: auto;
-    margin: 0 auto; /* centres image horizontally*/
-    border: 2px solid black;
-    display: block; /* make the image behave like a block to center properly */
-    object-fit: contain;
-}
-
-.caption { /*This is the image caption*/
-    margin-top: 10px;
-    font-style: italic;
-    text-align: right;
-    padding-right: 520px;
+    float: right;
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 2px solid #333 ;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     width: 100%;
 }
