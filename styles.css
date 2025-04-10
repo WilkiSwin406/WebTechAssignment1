@@ -414,7 +414,7 @@ table, th, td {
 .jobs-descriptions:hover li {
     color:white;
 }
-
+/*home page*/
 .home-box{
     background-color: #acacac;
     border: 1px solid black;
@@ -433,16 +433,20 @@ table, th, td {
     background-repeat: no-repeat;
     background-size: cover;
     width: 30%;
+    text-decoration: none;
+    transition: 0.4s ease;
 }
 .home-images:hover{
-    opacity: 50%;
+    opacity: 80%;
 }
 .home-images p{
-    color: #3e90ab;
+    color: #448493;
+    font-weight: bold;
+    -webkit-text-fill-color: #76e6ff;
+    -webkit-text-stroke: 0.5px;
+    text-align: center;
 }
-.home-images a{
-    color: #3e90ab;
-}
+/*images*/
 .home-about{
     background-image: linear-gradient(rgba(165, 165, 165, 0.6), rgba(165, 165, 165, 0.5)), url(images/group.png)
 }
@@ -456,6 +460,7 @@ table, th, td {
     background-image: linear-gradient(rgba(165, 165, 165, 0.6), rgba(165, 165, 165, 0.5)),url(images/home-application.jpg);/*Photo by Leon Dewiw on Unsplash*/
     background-position: 100%;
 }
+/*end home page*/
       
 aside {
     float: right;
