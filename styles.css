@@ -434,6 +434,15 @@ table, th, td {
     background-size: cover;
     width: 30%;
 }
+.home-images:hover{
+    opacity: 50%;
+}
+.home-images p{
+    color: #3e90ab;
+}
+.home-images a{
+    color: #3e90ab;
+}
 .home-about{
     background-image: linear-gradient(rgba(165, 165, 165, 0.6), rgba(165, 165, 165, 0.5)), url(images/group.png)
 }
