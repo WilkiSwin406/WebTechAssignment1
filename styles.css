@@ -26,6 +26,7 @@ fieldset {
     border-style: solid; /* make the border a solid color */
     background-color: #acacac ; /* make the background color of the fieldset ... */
     color: black; /* make the font color black */
+    border-radius: 15px; /* make the edges rounded */
   }
 
 fieldset:hover { /* when hovering over a fieldset change he background and border color */
@@ -56,9 +57,10 @@ label { /* move labels to the left side of the page */
 .buttons { /* the . signifies that this is a class which can be called upon in the html documents */
     background-color: #acacac;
     color: black;
-    border: none; /* make no border on the buttons*/
+    border: double; /* make a  border on the buttons*/
+    border-width: 1px; /* make the border thinner */
     padding: 10px 20px;
-    border-radius: 5px; /* make the edges rounded */
+    border-radius: 15px; /* make the edges rounded */
     cursor: pointer;
 
 }
@@ -93,6 +95,11 @@ label { /* move labels to the left side of the page */
     text-align: left;
     align-self: center;
   }
+
+.text-group select {
+    border-radius: 2px;
+    border-width: 0px;
+}
 
 .radio-group {
     display: flex; /* allow the elements to be flexible in their positioning on the page */
@@ -130,7 +137,7 @@ label { /* move labels to the left side of the page */
   }
 
 .input-check input {
-    align-content: center;
+    align-content: center; /* move the content to the centre */
     accent-color:  rgb(175, 215, 230);
     cursor: pointer;
 }
