@@ -7,15 +7,18 @@
 h1 {
     color: rgb(25, 120, 175);
     
+    
 
 }
 
-h2, h3 {
+h2, h3 h4 {
     color: rgb(175, 215, 230);
+    
 }
 
 
 /*Flynn's Application Page*/
+
 fieldset {
     border-color: rgb(175, 215, 230);
     border-style: solid;
@@ -41,6 +44,7 @@ legend {
     padding: 2px;
     float: left;
     text-decoration: underline;
+    cursor: default;
 }
 
 label {
@@ -111,7 +115,6 @@ label {
     cursor: pointer;
     accent-color:  rgb(175, 215, 230);
   }
-
   .input-check label {
     color: black;
     text-align: left;
@@ -121,12 +124,22 @@ label {
     display: inline-block;
     overflow: scroll;
     white-space: nowrap;
+    font-size: smaller;
   }
 
 .input-check input {
     align-content: center;
     accent-color:  rgb(175, 215, 230);
     cursor: pointer;
+}
+
+.input-check h4 {
+    color: rgb(175, 215, 230);
+    cursor: default;
+}
+
+.input-check ::placeholder  {
+    font-size: x-small ;
 }
 /*Benjamin's About Page*/
 
@@ -303,6 +316,7 @@ label {
     margin: 0 auto;
     text-align: center;
     border: 1px solid black;    
+    cursor: default;
 }
 
 table, th, td {
@@ -487,11 +501,7 @@ aside h3 {
     width: 100%;
 }
 
-.site-footer p {
-    color: white;
-}
-
-.site-footer a {
+.site-footer p, .site-footer a {
     color: white;
 }
 
@@ -507,10 +517,6 @@ aside h3 {
     bottom: 0;
 }
 
-.site-footer-sticky p {
-    color: white;
-}
-
-.site-footer-sticky a {
+.site-footer-sticky p, .site-footer-sticky a {
     color: white;
 }
