@@ -454,3 +454,23 @@ aside h3 {
 .site-footer a {
     color: white;
 }
+
+.site-footer-sticky {
+    text-align: center;
+    padding: 10px;
+    background-color: #444;
+    border-top: 2px solid black;
+    font-size: 10pt;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.site-footer-sticky p {
+    color: white;
+}
+
+.site-footer-sticky a {
+    color: white;
+}
