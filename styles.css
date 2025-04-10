@@ -311,6 +311,7 @@ label {
     margin: 0 auto;
     text-align: center;
     border: 1px solid black;    
+    cursor: default;
 }
 
 table, th, td {
