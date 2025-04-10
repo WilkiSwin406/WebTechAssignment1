@@ -423,19 +423,7 @@ aside {
 aside h3 {
     font-size: 24pt;
     color: black;
-}
-
-#cybit {
-    background-color: white;  
-}
-
-#cybit textarea {
-    font-size: 24pt;
-    border: none;
-}
-
-#cybit h4 {
-    color: red;
+    text-align: center;
 }
 
 .site-footer {
