@@ -317,8 +317,7 @@ table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
     border-spacing: 150px 100px;
-    background-color: rgb(175, 215, 230);
-  }
+}
 
 .table-box { 
     /*light grey flex box with corners, padding and border*/
@@ -332,6 +331,45 @@ table, th, td {
     max-width: 900px; /* set a max width for the entire box, this is for large screens*/
     margin: auto; /* center the box automatically */
     margin-bottom: 40px; /* Add a gap between the single box and image*/
+}
+
+/* background transition */
+.table tr {
+    background-color: rgb(175, 215, 230);
+    transition: background-color 0.3s ease;
+}
+
+.ben-row:hover {
+    background-color: #8e43ff;
+}
+
+.connor-row:hover {
+    background-color: #b9b9ff;
+
+}
+
+.darcy-row:hover {
+    background-color: #00bfff;
+}
+
+.flynn-row:hover {
+    background-color: #572325;
+}
+
+.ben-row:hover td {
+    color: white;
+}
+
+.connor-row:hover td {
+    color: black;
+}
+
+.darcy-row:hover td {
+    color: black;
+}
+
+.flynn-row:hover td {
+    color: white;
 }
 
 .big-text {
@@ -403,11 +441,14 @@ table, th, td {
     background-repeat: no-repeat;
     background-size: cover;
     width: 30%;
-    
 }
 .home-about{
     background-image: url(images/group.png);
 }
+.home-about::before{
+    opacity: 30%;
+}
+
 
 .home-jobs{
     background-image: url(images/home-jobs.jpg);/*Photo by headway on unisplash*/
@@ -431,19 +472,7 @@ aside {
 aside h3 {
     font-size: 24pt;
     color: black;
-}
-
-#cybit {
-    background-color: white;  
-}
-
-#cybit textarea {
-    font-size: 24pt;
-    border: none;
-}
-
-#cybit h4 {
-    color: red;
+    text-align: center;
 }
 
 .site-footer {
@@ -460,5 +489,25 @@ aside h3 {
 }
 
 .site-footer a {
+    color: white;
+}
+
+.site-footer-sticky {
+    text-align: center;
+    padding: 10px;
+    background-color: #444;
+    border-top: 2px solid black;
+    font-size: 10pt;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.site-footer-sticky p {
+    color: white;
+}
+
+.site-footer-sticky a {
     color: white;
 }
