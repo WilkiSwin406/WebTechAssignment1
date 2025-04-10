@@ -435,19 +435,16 @@ table, th, td {
     width: 30%;
 }
 .home-about{
-    background-image: url(images/group.png);
-}
-.home-about::before{
-    opacity: 30%;
+    background-image: linear-gradient(rgba(165, 165, 165, 0.6), rgba(165, 165, 165, 0.5)), url(images/group.png)
 }
 
 
 .home-jobs{
-    background-image: url(images/home-jobs.jpg);/*Photo by headway on unisplash*/
+    background-image: linear-gradient(rgba(165, 165, 165, 0.6), rgba(165, 165, 165, 0.5)),url(images/home-jobs.jpg);/*Photo by headway on unisplash*/
     background-position: 100%;
 }
 .home-application{
-    background-image: url(images/home-application.jpg);/*Photo by Leon Dewiw on Unsplash*/
+    background-image: linear-gradient(rgba(165, 165, 165, 0.6), rgba(165, 165, 165, 0.5)),url(images/home-application.jpg);/*Photo by Leon Dewiw on Unsplash*/
     background-position: 100%;
 }
       
