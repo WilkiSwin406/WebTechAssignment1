@@ -7,11 +7,13 @@
 h1 {
     color: rgb(25, 120, 175);
     
+    
 
 }
 
 h2, h3 h4 {
     color: rgb(175, 215, 230);
+    
 }
 
 
@@ -41,6 +43,7 @@ legend {
     padding: 2px;
     float: left;
     text-decoration: underline;
+    cursor: default;
 }
 
 label {
@@ -131,6 +134,7 @@ label {
 
 .input-check h4 {
     color: rgb(175, 215, 230);
+    cursor: default;
 }
 
 .input-check ::placeholder  {
