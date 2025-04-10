@@ -437,3 +437,23 @@ aside h3 {
 #cybit h4 {
     color: red;
 }
+
+.site-footer {
+    text-align: center;
+    padding: 10px 20px; /*Adds space inside the header 10px to top/bot 20px to L/R*/
+    background-color: #444;
+    border: 2px solid black;
+    font-size: 10pt;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.site-footer p {
+    color: white;
+}
+
+.site-footer a {
+    color: white;
+}
