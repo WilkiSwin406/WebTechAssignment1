@@ -6,10 +6,14 @@
 
 h1 {
     color: rgb(25, 120, 175);
+    
+    
+
 }
 
 h2, h3 h4 {
     color: rgb(175, 215, 230);
+    
 }
 
 
@@ -485,11 +489,7 @@ aside h3 {
     width: 100%;
 }
 
-.site-footer p {
-    color: white;
-}
-
-.site-footer a {
+.site-footer p, .site-footer a {
     color: white;
 }
 
@@ -505,10 +505,6 @@ aside h3 {
     bottom: 0;
 }
 
-.site-footer-sticky p {
-    color: white;
-}
-
-.site-footer-sticky a {
+.site-footer-sticky p, .site-footer-sticky a {
     color: white;
 }
