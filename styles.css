@@ -10,7 +10,7 @@ h1 {
 
 }
 
-h2, h3 {
+h2, h3 h4 {
     color: rgb(175, 215, 230);
 }
 
@@ -111,7 +111,6 @@ label {
     cursor: pointer;
     accent-color:  rgb(175, 215, 230);
   }
-
   .input-check label {
     color: black;
     text-align: left;
@@ -121,12 +120,21 @@ label {
     display: inline-block;
     overflow: scroll;
     white-space: nowrap;
+    font-size: smaller;
   }
 
 .input-check input {
     align-content: center;
     accent-color:  rgb(175, 215, 230);
     cursor: pointer;
+}
+
+.input-check h4 {
+    color: rgb(175, 215, 230);
+}
+
+.input-check ::placeholder  {
+    font-size: x-small ;
 }
 /*Benjamin's About Page*/
 
@@ -433,11 +441,14 @@ table, th, td {
     background-repeat: no-repeat;
     background-size: cover;
     width: 30%;
-    
 }
 .home-about{
     background-image: url(images/group.png);
 }
+.home-about::before{
+    opacity: 30%;
+}
+
 
 .home-jobs{
     background-image: url(images/home-jobs.jpg);/*Photo by headway on unisplash*/
