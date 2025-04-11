@@ -438,7 +438,7 @@ table, th, td {
     color:white;
 }
 /*home page*/
-.home-box{
+.home-box{/*creates a section seperated from the white background useful for deviding up page*/
     background-color: #acacac;
     border: 1px solid black;
     padding: 15px;
@@ -448,36 +448,37 @@ table, th, td {
     border-radius: 15px;
 }
 
-.home-container{
+.home-container{/*means that the images are on the same line*/
     display: flex;
 }
 
-.home-images{
+.home-images{/*general class for all the images mostly makes the images look nice in there boxes and make boxes correct size*/
     background-repeat: no-repeat;
     background-size: cover;
     width: 30%;
-    text-decoration: none;
-    transition: 0.4s ease;
+    text-decoration: none;/*removes underline that comes from a tag*/
+    transition: 0.4s ease;/*adds transition time to 80% opacity*/
 }
-.home-images:hover{
+.home-images:hover{/*increases opacity when hovering over the images allows users to identify they should push button*/ 
     opacity: 80%;
 }
-.home-images p{
+.home-images p{/*sets colour and style of text in images*/
     color: #448493;
     font-weight: bold;
-    -webkit-text-fill-color: #76e6ff;
+    -webkit-text-fill-color: #76e6ff;/*webkit stuff allows for an outline around letter*/ 
     -webkit-text-stroke: 0.5px;
     text-align: center;
 }
 /*images*/
+/*following section defines background images and modifies them*/ 
 .home-about{
-    background-image: linear-gradient(rgba(165, 165, 165, 0.6), rgba(165, 165, 165, 0.5)), url(images/group.png)
+    background-image: linear-gradient(rgba(165, 165, 165, 0.6), rgba(165, 165, 165, 0.5)), url(images/group.png)/*add opacity for image with out affecting child elelements*/
 }
 
 
 .home-jobs{
     background-image: linear-gradient(rgba(165, 165, 165, 0.6), rgba(165, 165, 165, 0.5)),url(images/home-jobs.jpg);/*Photo by headway on unisplash*/
-    background-position: 100%;
+    background-position: 100%;/*means that the background starts at the bottom of the image so if the box is to small it cuts out top of image rather than bottom*/
 }
 .home-application{
     background-image: linear-gradient(rgba(165, 165, 165, 0.6), rgba(165, 165, 165, 0.5)),url(images/home-application.jpg);/*Photo by Leon Dewiw on Unsplash*/
