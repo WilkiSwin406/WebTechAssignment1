@@ -390,6 +390,7 @@ table, th, td {
 .big-text {
     font-size: 3em;
 }
+
 /* Connor's Jobs Page */
 
 
@@ -404,7 +405,7 @@ table, th, td {
     padding: 10px;
 }
 
-.jobs-descriptions {
+.jobs-descriptions { /* this block of code creates the job description tiles: rounded tiles with a 15pt black border that change colour when hovered over */
     background-color: #acacac;
     border: 15px solid black;
     padding: 15px;
@@ -415,28 +416,21 @@ table, th, td {
     transition: background-color 0.15s linear;
 }
 
-/* The code below adds color transition effects when you hover over the job descriptor tiles */
+/* The code below handles the color transition effects when you hover over the job descriptor tiles */
 
-.jobs-descriptions p {
-    transition: color 0.15s linear;
+.jobs-descriptions:hover { /* this hover pseudo-class sets the background color to blue when the job description tiles are hovered over, and also ensures the cursor does not change */
+    background-color: rgb(25, 120, 175);   
+    cursor: default;
 }
 
-.jobs-descriptions li {
-    transition: color 0.15s linear;
-}
-
-.jobs-descriptions:hover {
-    background-color: rgb(25, 120, 175);
-    cursor: pointer;    
-}
-
-.jobs-descriptions:hover p {
+.jobs-descriptions:hover p, .jobs-descriptions:hover li {  /* these grouped tags set the colour of the text in jobs-descriptions when you hover over them to white */
     color: white;
 }
 
-.jobs-descriptions:hover li {
-    color:white;
+.jobs-descriptions p, .jobs-descriptions li { /* these grouped tags provide the length of the transition from black to white of the text in jobs-descriptions when hovered over */
+    transition: color 0.15s linear;
 }
+
 /*home page*/
 .home-box{/*creates a section seperated from the white background useful for deviding up page*/
     background-color: #acacac;
@@ -486,7 +480,7 @@ table, th, td {
 }
 /*end home page*/
       
-aside {
+aside { /*  this aside floats to the right, is set to 25% of the width of the page, and has a consistent colour scheme with the blues and greys of the rest of our website   */
     float: right;
     border: 15px solid grey;
     border-radius: 2pt;
@@ -496,13 +490,13 @@ aside {
     background-color: rgb(175, 215, 230);
 }
 
-aside h3 {
+aside h3 { /* we use a contextual tag here to ensure that the heading is legible within the aside */
     font-size: 24pt;
     color: black;
     text-align: center;
 }
 
-.site-footer {
+.site-footer { /* this footer is 100% of the width of the page, and will appear naturally after all the page's content. This same footer is used on three of the four pages */
     text-align: center;
     padding: 10px;
     background-color: #444;
@@ -511,11 +505,9 @@ aside h3 {
     width: 100%;
 }
 
-.site-footer p, .site-footer a {
-    color: white;
-}
 
-.site-footer-sticky {
+
+.site-footer-sticky { /* this is a special version of the footer used only on the index page, the only difference being that it will be fixed to the absolute bottom of the window. This stops the footer from showing up halfway up the page on the index page, since it has less content */
     text-align: center;
     padding: 10px;
     background-color: #444;
@@ -527,6 +519,6 @@ aside h3 {
     bottom: 0;
 }
 
-.site-footer-sticky p, .site-footer-sticky a {
+.site-footer p, .site-footer a, .site-footer-sticky p, .site-footer-sticky a { /* these grouped tags modify only the text within the footer, changing its colour to make it readable */
     color: white;
 }

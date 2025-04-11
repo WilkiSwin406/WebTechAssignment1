@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Connor Wright">
     <meta name="description" content="Descriptions of open job positions at CyberBytes">
+    <meta name="keywords" content="job listings, cyberbytes, applications, employment, software development">
     <title>CyberBytes Available Positions</title>
 
     <link href="styles.css" rel="stylesheet">
@@ -26,7 +27,7 @@
         </nav>
     </header>
 
-    <aside>
+    <aside> <!-- this aside is meant to be an employee review board, where employees can give reviews of their job in order to encourage potential applicants to apply-->
         <h3>...But don't just take our word for it!</h3>
         <p>Below, find quotes from some of our CyberBytes employees! Read their glowing reviews, and let them help you to discover the right job for you - at CyberBytes!</p>
         <h4>Jacob Mackey, Data Analyst (employed 2 years)</h4>
@@ -46,15 +47,15 @@
         <section class="jobs-tiles">
 
             <!-- GenAI used as a template for all job descriptions. Website used was https://chatgpt.com, and the prompt was: "Hi, ChatGPT! Can you please write me one short paragraph (for each position) that would serve as a position description for the following jobs: Cloud Engineer, Database Engineer, Data Analyst, UX Designer" -->
-            <section class="jobs-descriptions" id="cloud-engineer"> 
+            <section class="jobs-descriptions" id="cloud-engineer"> <!-- each job listing is given its own section, which all share a class but are given unique ids -->
                 <h2>Cloud Engineer, Level 1</h2>
                 <p>As one of our cloud engineers, you will be responsible for designing, implementing and maintaining our cloud-based infrastructure and services. You must ensure that our cloud systems are scalable, secure and reliable at all times. Your position will primarily consist of maintenance work as a level one employee.</p>
-                <ul>
+                <ul> <!-- an unordered list is used to give a detailed breakdown on each position described and to more easily categorise requirements -->
                     <li>Position Reference Number: CLE01</li> <!-- reference number format: three-letter abbreviation of job title, two numbers that signify seniority level -->
                     <li>Salary range: $100,000 - $105,100</li>
                     <li>Supervisor position: Cloud Engineer, Level 3 (CLE03)</li>
                     <li>Essential requirements:</li>
-                    <ol>
+                    <ol> <!-- an ordered list is used here to display essential requirements and preferable qualities, ordered by importance -->
                         <li>2+ years of experience in cloud platforms (AWS, Azure, or GCP)</li>
                         <li>Strong understanding of networking, security, and cloud architecture</li>
                         <li>Proficient in scripting languages (e.g., Python, Bash)</li>
@@ -133,7 +134,7 @@
         </section>
     </section>
 
-    <footer class="site-footer">
+    <footer class="site-footer"> <!-- this footer includes a link to the Jira project, a mailto link with our group's email address, links to the other pages of our website, and a copyright listing for fluff -->
         <p>Copyright 2025, The Swinburne Sigmas. All rights reserved.</p>
         <a href="https://webtechprojectteam.atlassian.net/jira/software/projects/SCRUM/boards/1?atlOrigin=eyJpIjoiNmU3NTI5NjZlNDc0NGRiMzk2NjE0ZWFmMTAyODAwY2MiLCJwIjoiaiJ9">The Swinburne Sigmas Jira Project</a>
         <p></p>
