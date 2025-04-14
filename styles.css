@@ -38,6 +38,10 @@ fieldset:hover label { /* when hovering over a fieldset make the labels font col
     color: white;
 }
 
+fieldset:hover p { /* when hovering over a fieldset make the paragraphs font color white*/
+    color: white;
+}
+
 fieldset:hover legend { /* when hovering over the fieldset make the legends font color black*/
     color: black; 
 }
@@ -106,18 +110,18 @@ label { /* move labels to the left side of the page */
     gap: 4px; /* space between buttons of 4 pixels */
   }
   
+  .radio-group p {
+    color: black;
+    text-align: left;
+    align-self: center;
+    width: 10%;
+  }
+
   .radio-label {
     color: black;
     display: flex;
     align-items: center;
     gap: 2px;
-  }
-
-  .radio-label-2 {
-    color: black;
-    text-align: left;
-    align-self: center;
-    width: 10%;
   }
   
   .radio-option {

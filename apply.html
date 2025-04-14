@@ -44,22 +44,22 @@
         </div>
         <br>
         <div class="radio-group">
-            <label for="Gender" class="radio-label-2">Gender: </label> <br>
+            <p>Gender:</p>
             <label for="Male" class="radio-label">Male</label>
-            <input type="radio" class="radio-option" name="Gender" id="Male" value="Male"> <option value="1"></option>
+            <input type="radio" class="radio-option" name="Gender" id="Male" value="Male"> 
             <label for="Female" class="radio-label">| Female</label>
-            <input type="radio"  class="radio-option" name="Gender" id="Female" value="Female"> <option value="2"></option>
+            <input type="radio"  class="radio-option" name="Gender" id="Female" value="Female"> 
             <label for="Non-Binary" class="radio-label">| Non-Binary</label>
-            <input type="radio" class="radio-option"  name="Gender" id="Non-Binary" value="Non-Binary"> <option value="3"></option>
+            <input type="radio" class="radio-option"  name="Gender" id="Non-Binary" value="Non-Binary"> 
             <label for="Other" class="radio-label">| Other</label>
-            <input type="radio"  class="radio-option" name="Gender" id="Other" value="Other"> <option value="4"></option>
+            <input type="radio"  class="radio-option" name="Gender" id="Other" value="Other"> 
             <label for="Rather-not-Say" class="radio-label">| Rather not Say</label>
-            <input type="radio" class="radio-option" name="Gender" id="Rather-not-Say" value="Rather-not-Say"> <option value="5"></option>
+            <input type="radio" class="radio-option" name="Gender" id="Rather-not-Say" value="Rather-not-Say"> 
         </div>
         <br>
         <div class="text-group">
-            <label for="Date">Date of Birth:</label>
-            <input type="date" name="DOB" id="DOB" required> <!-- a date input -->
+            <label for="DOB">Date of Birth:</label>
+            <input type="Date" name="DOB" id="DOB" required> <!-- a date input -->
         </div>
     </fieldset>
     <fieldset>
@@ -103,21 +103,21 @@
         <div class="input-check">
             <h4>Applicant Skills</h4>
               <label for="Cloud-Platform">Cloud Platform Knowledge</label>
-              <input type="checkbox" id="Cloud-Platform" name="Cloud-Platform" value="Cloud-Platform"> <br> <!-- a checkbox allows other checkboxes to be checked instead of only one with a radio button-->
+              <input type="checkbox" id="Cloud-Platform" name="Cloud-Platform" value="Yes"> <br> <!-- a checkbox allows other checkboxes to be checked instead of only one with a radio button-->
               <label for="Networking">Digital Networking Knowledge</label>
-              <input type="checkbox" id="Networking" name="Networking" value="Networking"> <br>
+              <input type="checkbox" id="Networking" name="Networking" value="Yes"> <br>
               <label for="Security">Digital Security Knowledge</label>
-              <input type="checkbox" id="Security" name="Security" value="Security"> <br>
+              <input type="checkbox" id="Security" name="Security" value="yes"> <br>
               <label for="Virtualisation">Virtualisation</label>
-              <input type="checkbox" id="Virtualisation" name="Virtualisation" value="Virtualisation"> <br>
+              <input type="checkbox" id="Virtualisation" name="Virtualisation" value="Yes"> <br>
               <label for="Programming">Programming</label>
-              <input type="checkbox" id="Programming" name="Programming" value="Programming"> <br>
+              <input type="checkbox" id="Programming" name="Programming" value="Yes"> <br>
               <label for="Database">Data Base Creation & Management</label>
-              <input type="checkbox" id="Database" name="Database" value="Database"> <br>
+              <input type="checkbox" id="Database" name="Database" value="Yes"> <br>
               <label for="Automation-Tools">Automation Tools</label>
-              <input type="checkbox" id="Automation-Tools" name="Automation-Tools" value="Automation-Tools"> <br>
+              <input type="checkbox" id="Automation-Tools" name="Automation-Tools" value="Yes"> <br>
               <label for="UI-UX">UI & UX understanding</label>
-              <input type="checkbox" id="UI-UX" name="UI-UX" value="UI-UX" > <br>
+              <input type="checkbox" id="UI-UX" name="UI-UX" value="Yes" > <br>
               <Label for="Other-skills">Other Skills</Label>
               <textarea name="Other-skills" id="Other-skills"  placeholder="#Comma separated list"></textarea>
         </div>
@@ -126,7 +126,7 @@
 
 <br>
     <!-- submits the data entered and then follows the action and method-->
-<input type="submit" class="buttons"value="Apply">
+<input type="submit" class="buttons" value="Apply">
 <!-- resets all the current inputs-->
 <input type="reset" class="buttons" value="Reset">
 </form>
