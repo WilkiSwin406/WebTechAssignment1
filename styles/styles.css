@@ -358,6 +358,8 @@ table, th, td {
     transition: background-color 0.3s ease;
 }
 
+/*all of these are pretty self-explanatory hover and change the row as well as hover and change the text colour*/
+
 .ben-row:hover {
     background-color: #8e43ff;
 }
