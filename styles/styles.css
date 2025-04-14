@@ -416,6 +416,10 @@ table, th, td {
     transition: background-color 0.15s linear;
 }
 
+.jobs-body h2 { /* this makes sure headings are visible and high-contrast */
+    color: #444;
+}
+
 /* The code below handles the color transition effects when you hover over the job descriptor tiles */
 
 .jobs-descriptions:hover { /* this hover pseudo-class sets the background color to blue when the job description tiles are hovered over, and also ensures the cursor does not change */
@@ -423,11 +427,11 @@ table, th, td {
     cursor: default;
 }
 
-.jobs-descriptions:hover p, .jobs-descriptions:hover li {  /* these grouped tags set the colour of the text in jobs-descriptions when you hover over them to white */
+.jobs-descriptions:hover p, .jobs-descriptions:hover li, .jobs-descriptions:hover h2 {  /* these grouped tags set the colour of the text in jobs-descriptions when you hover over them to white */
     color: white;
 }
 
-.jobs-descriptions p, .jobs-descriptions li { /* these grouped tags provide the length of the transition from black to white of the text in jobs-descriptions when hovered over */
+.jobs-descriptions p, .jobs-descriptions li, .jobs-descriptions h2 { /* these grouped tags provide the length of the transition from black to white of the text in jobs-descriptions when hovered over */
     transition: color 0.15s linear;
 }
 
