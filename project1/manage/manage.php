@@ -10,5 +10,14 @@
   <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
+    <form action=""><!--list all eois-->
+      <input type = 'submit'>
+    </form>
+    <form action=""><!--list all eois for position-->
+      
+      <input type = 'text' id = "" name = "">
+      <input type = 'submit'>
+    </form>
+    <form action=""></form>
     <form action=""></form>
 </body>
