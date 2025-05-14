@@ -442,6 +442,12 @@ table, th, td {
 }
 
 /*home page*/
+.home-body{/*adds background image for all of home page*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("images/logo.png");
+}
+
 .home-box{/*creates a section seperated from the white background useful for deviding up page*/
     background-color: #acacac;
     border: 1px solid black;
