@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-    <form action="EOI_manage"><!--list all eois-->
+    <form action="EOI_manage.php" method = "post"><!--list all eois-->
       <label for = "all">List All EOIs(give nothing)</label>
       <input type = "radio" id = "list_all" name = "eoi_managment_type" value ="list_all"><br>
       
