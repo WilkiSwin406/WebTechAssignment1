@@ -10,14 +10,30 @@
   <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-    <form action=""><!--list all eois-->
-      <input type = 'submit'>
-    </form>
-    <form action=""><!--list all eois for position-->
+    <form action="EOI_manage"><!--list all eois-->
+      <label for = "all">List All EOIs(give nothing)</label>
+      <input type = "radio" id = "list_all" name = "eoi_managment_type" value ="list_all">
       
-      <input type = 'text' id = "" name = "">
+      <label for = "">List EOIs for a job position (give job refrence number)</label>
+      <input type = "radio" id = "list_position" name = "eoi_managment_type" value ="list_position">
+      
+      <label for = "">delete EOIs for a job position (give job refrence number)</label>
+      <input type = "radio" id = "delete_position" name = "eoi_managment_type" value ="delete_position">
+      
+      <label for = "">List EOIs for a applicant(give firstname or lastname or both)</label>
+      <input type = "radio" id = "list_applicant" name = "eoi_managment_type" value ="list_applicant">
+      
+      <label for = "extra_info">enter required info</label>
+      <input type = "text" id = "extra_info" name = "extra_info">
       <input type = 'submit'>
     </form>
-    <form action=""></form>
-    <form action=""></form>
+    
+    
+    
+    
+    <!--<form action = ""> <!-change status eoi->
+    
+  
+  
+    </form>-->
 </body>
