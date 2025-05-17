@@ -12,25 +12,22 @@
 <body>
     <form action="EOI_manage"><!--list all eois-->
       <label for = "all">List All EOIs(give nothing)</label>
-      <input type = "radio" id = "list_all" name = "eoi_managment_type" value ="list_all">
+      <input type = "radio" id = "list_all" name = "eoi_managment_type" value ="list_all"><br>
       
       <label for = "">List EOIs for a job position (give job refrence number)</label>
-      <input type = "radio" id = "list_position" name = "eoi_managment_type" value ="list_position">
+      <input type = "radio" id = "list_position" name = "eoi_managment_type" value ="list_position"><br>
       
       <label for = "">delete EOIs for a job position (give job refrence number)</label>
-      <input type = "radio" id = "delete_position" name = "eoi_managment_type" value ="delete_position">
+      <input type = "radio" id = "delete_position" name = "eoi_managment_type" value ="delete_position"><br>
       
       <label for = "">List EOIs for a applicant(give firstname or lastname or both)</label>
-      <input type = "radio" id = "list_applicant" name = "eoi_managment_type" value ="list_applicant">
+      <input type = "radio" id = "list_applicant" name = "eoi_managment_type" value ="list_applicant"><br>
       
       <label for = "extra_info">enter required info</label>
       <input type = "text" id = "extra_info" name = "extra_info">
       <input type = 'submit'>
     </form>
-    
-    
-    
-    
+
     <!--<form action = ""> <!-change status eoi->
     
   
