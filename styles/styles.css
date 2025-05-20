@@ -402,7 +402,7 @@ table, th, td {
 
 .jobs-tiles {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
 }
 
 .jobs-body {
@@ -413,12 +413,12 @@ table, th, td {
 
 .jobs-descriptions { /* this block of code creates the job description tiles: rounded tiles with a 15pt black border that change colour when hovered over */
     background-color: #acacac;
-    border: 15px solid black;
-    padding: 4%;
+    border: 1px solid black;
+    padding: 1%;
     padding-left: 4%;
     padding-right: 4%;
-    margin: 4%;
-    border-radius: 5px;
+    margin: 0.75%;
+    border-radius: 15px;
     transition: background-color 0.15s linear;
 }
 
@@ -442,6 +442,10 @@ table, th, td {
 }
 .jobs-descriptions p, .jobs-descriptions li, .jobs-descriptions h2, .jobs-descriptions a { /* these grouped tags provide the length of the transition from black to white of the text in jobs-descriptions when hovered over */
     transition: color 0.15s linear;
+}
+
+.applylink {
+    text-align: center;
 }
 
 /*home page*/
@@ -495,11 +499,11 @@ table, th, td {
       
 aside { /*  this aside floats to the right, is set to 25% of the width of the page, and has a consistent colour scheme with the blues and greys of the rest of our website   */
     float: right;
-    border: 15px solid grey;
-    border-radius: 2pt;
+    border: 1px solid grey;
+    border-radius: 15pt;
     width: 25%;
-    padding: 10pt;
-    margin: 10pt;
+    padding: 1%;
+    margin: 1%;
     background-color: rgb(175, 215, 230);
 }
 
