@@ -414,10 +414,10 @@ table, th, td {
 .jobs-descriptions { /* this block of code creates the job description tiles: rounded tiles with a 15pt black border that change colour when hovered over */
     background-color: #acacac;
     border: 15px solid black;
-    padding: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 5px;
+    padding: 4%;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin: 4%;
     border-radius: 5px;
     transition: background-color 0.15s linear;
 }
@@ -433,11 +433,14 @@ table, th, td {
     cursor: default;
 }
 
-.jobs-descriptions:hover p, .jobs-descriptions:hover li, .jobs-descriptions:hover h2 {  /* these grouped tags set the colour of the text in jobs-descriptions when you hover over them to white */
+.jobs-descriptions:hover p, .jobs-descriptions:hover li, .jobs-descriptions:hover h2{  /* these grouped tags set the colour of the text in jobs-descriptions when you hover over them to white */
     color: white;
 }
 
-.jobs-descriptions p, .jobs-descriptions li, .jobs-descriptions h2 { /* these grouped tags provide the length of the transition from black to white of the text in jobs-descriptions when hovered over */
+.jobs-descriptions:hover a {
+    color: lightskyblue;
+}
+.jobs-descriptions p, .jobs-descriptions li, .jobs-descriptions h2, .jobs-descriptions a { /* these grouped tags provide the length of the transition from black to white of the text in jobs-descriptions when hovered over */
     transition: color 0.15s linear;
 }
 
