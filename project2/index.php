@@ -46,6 +46,6 @@
         </section>
     </main>
 
-   <?php include 'footer.inc'?>;
+   <?php include 'footer.inc';?>
 
 </body>
