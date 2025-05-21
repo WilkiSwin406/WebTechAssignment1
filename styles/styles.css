@@ -497,6 +497,14 @@ table, th, td {
     background-position: 100%;
 }
 /*end home page*/
+
+/*manage page*/
+.manage-radio-group {
+    display: grid; /* make the class elements display as a grid*/
+    grid-template-columns: 1fr 1fr;
+    /*grid-template-rows: 20% 20% 20% 20%;*/
+}
+/*end manage page*/
       
 aside { /*  this aside floats to the right, is set to 25% of the width of the page, and has a consistent colour scheme with the blues and greys of the rest of our website   */
     float: right;
