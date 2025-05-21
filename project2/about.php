@@ -13,7 +13,7 @@
 <body>
 
    <?php include 'header.inc'?>;
-
+    
     <main class="main-content">
 
         <section class="hidden-box">
