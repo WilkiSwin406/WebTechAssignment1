@@ -189,6 +189,7 @@ label { /* move labels to the left side of the page */
 .nav-links { /* sets nav links in a row with 20px inbetween*/
     display: flex;
     gap: 20px;
+    
 }
 
 .nav-links a { /* makes nav links white and removes the underline*/
