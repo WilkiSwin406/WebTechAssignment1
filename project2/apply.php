@@ -6,20 +6,7 @@
     <title>CyberBytes Application</title> <!-- what the website page is called on the tabs bar-->
     <link rel="stylesheet" href="../styles/styles.css"> <!-- Links the css style sheet to this html doc-->
 </head> <!-- end of the head section-->
-<header class="site-header"> <!--dictates that this section of the page is the header and the that all css changes will be managed by the site-header class-->
-    <div class="logo-title"> <!-- div dictates a divided section of the page for formating and readibility-->
-        <img src="../images/logo.png" alt="CyberBytes Logo" class="logo-image"> <!-- this is the businesses logo and its source-->
-        <h1>CyberBytes</h1> <!-- this is the main heading, 1 dictates its the highest-->
-    </div>
-
-    <nav class="nav-links"> <!-- navigation links-->
-        <a href="index.html">Index</a>
-        <a href="jobs.html">Jobs</a>
-        <a href="apply.html">Apply</a>
-        <a href="about.html">About</a>
-        <a href="mailto:webtechprojectteam@gmail.com">Contact us</a>
-    </nav>
-</header>
+<?php include 'header.inc'?>;
         <br>
         <br>
 <form action="http://mercury.swin.edu.au/it000000/formtest.php" method="post"> <!-- everything inside the form tag is a form and the method of post sends all informtation collected to the action link-->

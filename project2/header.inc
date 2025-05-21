@@ -6,10 +6,10 @@
         </div>
 
         <nav class="nav-links">
-            <a href="index.html">Index</a>
-            <a href="jobs.html">Jobs</a>
-            <a href="apply.html">Apply</a>
-            <a href="about.html">About</a>
+            <a href="index.php">Index</a>
+            <a href="jobs.php">Jobs</a>
+            <a href="apply.php">Apply</a>
+            <a href="about.php">About</a>
             <a href="mailto:webtechprojectteam@gmail.com">Contact us</a>
         </nav>
     </header>
