@@ -5,7 +5,7 @@
   <meta name="description" content="the home page for the IT company CyberBytes" />
   <meta name="keywords" content="CyberBytes, home, info tech , web design, index" />
   <meta name="author" content="Swinburne Sigmas"  />
-  <title>CyberBytes</title>
+  <title>CyberBytes home</title>
   
   <link rel="stylesheet" href="../styles/styles.css">
 </head>
