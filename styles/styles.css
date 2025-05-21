@@ -522,20 +522,6 @@ aside h3 { /* we use a contextual tag here to ensure that the heading is legible
     width: 100%;
 }
 
-
-
-.site-footer-sticky { /* this is a special version of the footer used only on the index page, the only difference being that it will be fixed to the absolute bottom of the window. This stops the footer from showing up halfway up the page on the index page, since it has less content */
-    text-align: center;
-    padding: 10px;
-    background-color: #444;
-    border-top: 15px solid black;
-    font-size: 10pt;
-    width: 100%;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-}
-
-.site-footer p, .site-footer a, .site-footer-sticky p, .site-footer-sticky a { /* these grouped tags modify only the text within the footer, changing its colour to make it readable */
+.site-footer p, .site-footer a { /* these grouped tags modify only the text within the footer, changing its colour to make it readable */
     color: white;
 }

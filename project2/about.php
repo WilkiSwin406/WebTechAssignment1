@@ -12,22 +12,7 @@
 
 <body>
 
-    <!--Header is for the header of the website which is the same across all pages-->
-    <header class="site-header">
-        <div class="logo-title"> <!-- this is div because changing it to figure changes the sizing of the image-->
-            <img src="../images/logo.png" alt="CyberBytes Logo" class="logo-image">
-            <h1>CyberBytes</h1>
-        </div>
-
-        <nav class="nav-links">
-            <!-- a is hypertext anchor-->
-            <a href="index.html">Index</a>
-            <a href="jobs.html">Jobs</a>
-            <a href="apply.html">Apply</a>
-            <a href="about.html">About</a>
-            <a href="mailto:webtechprojectteam@gmail.com">Contact us</a>
-        </nav>
-    </header>
+   <?php include 'header.inc'?>;
 
     <main class="main-content">
 
@@ -175,17 +160,7 @@
         
     </main>
 
-    <footer class="site-footer">
-        <p>Copyright 2025, The Swinburne Sigmas. All rights reserved.</p>
-        <a href="https://webtechprojectteam.atlassian.net/jira/software/projects/SCRUM/boards/1?atlOrigin=eyJpIjoiNmU3NTI5NjZlNDc0NGRiMzk2NjE0ZWFmMTAyODAwY2MiLCJwIjoiaiJ9">The Swinburne Sigmas Jira Project</a>
-        <p></p>
-        <a href="mailto:webtechprojectteam@gmail.com">Contact us</a>
-        <p></p>
-        <a href="index.html">Index</a>
-        <a href="jobs.html">Jobs</a>
-        <a href="apply.html">Apply</a>
-        <a href="about.html">About</a>
-    </footer>
+   <?php include 'footer.inc'?>;
     
 </body>
 

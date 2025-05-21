@@ -12,20 +12,7 @@
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="logo-title">
-            <img src="../images/logo.png" alt="CyberBytes Logo" class="logo-image">
-            <h1>CyberBytes</h1>
-        </div>
-
-        <nav class="nav-links">
-            <a href="index.html">Index</a>
-            <a href="jobs.html">Jobs</a>
-            <a href="apply.html">Apply</a>
-            <a href="about.html">About</a>
-            <a href="mailto:webtechprojectteam@gmail.com">Contact us</a>
-        </nav>
-    </header>
+    <?php include 'header.inc'?>;
 
     <aside> <!-- this aside is meant to be an employee review board, where employees can give reviews of their job in order to encourage potential applicants to apply-->
         <h3>...But don't just take our word for it!</h3>
@@ -160,16 +147,6 @@
         </section>
     </section>
 
-    <footer class="site-footer"> <!-- this footer includes a link to the Jira project, a mailto link with our group's email address, links to the other pages of our website, and a copyright listing for fluff -->
-        <p>Copyright 2025, The Swinburne Sigmas. All rights reserved.</p>
-        <a href="https://webtechprojectteam.atlassian.net/jira/software/projects/SCRUM/boards/1?atlOrigin=eyJpIjoiNmU3NTI5NjZlNDc0NGRiMzk2NjE0ZWFmMTAyODAwY2MiLCJwIjoiaiJ9">The Swinburne Sigmas Jira Project</a>
-        <p></p>
-        <a href="mailto:webtechprojectteam@gmail.com">Contact us</a>
-        <p></p>
-        <a href="index.html">Index</a>
-        <a href="jobs.html">Jobs</a>
-        <a href="apply.html">Apply</a>
-        <a href="about.html">About</a>
-    </footer>
+   <?php include 'footer.inc'?>;
 </body>
 </html>
