@@ -9,5 +9,6 @@
         <a href="jobs.php">Jobs</a>
         <a href="apply.php">Apply</a>
         <a href="about.php">About</a>
+        <a href="manage/manage.php">Manage</a>
     </footer>
 </html>

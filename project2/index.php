@@ -30,16 +30,16 @@
 
 
         <section class="home-container"><!--section has images that are links as alternative way to getting to other pages-->
-            <a class="home-box  home-images home-about" href="about.html"><!--each a tag contains the image as a baground and text infront. the multiple classes allowed me to modify them all simultanously and seperatly-->
+            <a class="home-box  home-images home-about" href="about.php"><!--each a tag contains the image as a baground and text infront. the multiple classes allowed me to modify them all simultanously and seperatly-->
                 <p class="">looking to find out more about us, click here</p>
             </a>
             
             
-            <a class="home-box home-images home-jobs" href="jobs.html">
+            <a class="home-box home-images home-jobs" href="jobs.php">
                 <p>wanna see what Opportunities we have available, find out here</p>
             </a>
             
-            <a class="home-box home-images home-application" href="apply.html">
+            <a class="home-box home-images home-application" href="apply.php">
                 <p>you ready to join the team, apply here</p>
             </a>
         

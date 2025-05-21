@@ -26,11 +26,11 @@
     </nav>
   </header>
   <main class= main-content>
-        <section class="home-box"><!--section has general info about comapany-->
-        <h2>Manage Expressions Of Interests</h2>
+        <section class="home-box">
+          <h2>Manage Expressions Of Interests</h2>
 
           <form action="EOI_manage.php" method = "post"><!--list all eois-->
-            <div class = "text-group">
+            <!--<div class = "text-group">-->
               <label for = "all">List All EOIs(give nothing)</label>
               <input type = "radio" id = "list_all" name = "eoi_managment_type" value ="list_all"><br>
               
@@ -45,7 +45,7 @@
               
               <label for = "extra_info">enter required info</label>
               <input type = "text" id = "extra_info" name = "extra_info">
-            </div>
+            <!--</div>-->
             <input type = 'submit'>
           </form>
         </section>
