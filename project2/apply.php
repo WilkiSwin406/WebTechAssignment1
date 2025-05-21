@@ -118,16 +118,5 @@
 <input type="reset" class="buttons" value="Reset">
 </form>
  <br><br>
-<footer class="site-footer"> <!-- footer tag used to show that this should be at the bottom of the page -->
-    <p>Copyright 2025, The Swinburne Sigmas. All rights reserved.</p>
-    <a href="https://webtechprojectteam.atlassian.net/jira/software/projects/SCRUM/boards/1?atlOrigin=eyJpIjoiNmU3NTI5NjZlNDc0NGRiMzk2NjE0ZWFmMTAyODAwY2MiLCJwIjoiaiJ9">The Swinburne Sigmas Jira Project</a>
-    <p></p>
-    <a href="mailto:webtechprojectteam@gmail.com">Contact us</a>
-    <p></p>
-    <a href="index.html">Index</a>
-    <a href="jobs.html">Jobs</a>
-    <a href="apply.html">Apply</a>
-    <a href="about.html">About</a>
-</footer>
-
+<?php include 'footer.inc'?>;
 </html>
