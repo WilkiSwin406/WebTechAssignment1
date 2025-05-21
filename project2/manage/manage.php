@@ -30,8 +30,8 @@
           <h2>Manage Expressions Of Interests</h2>
 
           <form action="EOI_manage.php" method = "post"><!--list all eois-->
-            <!--<div class = "manage-radio-group">-->
-              <label for = "all">List All EOIs(give nothing)</label>
+            <div class = "manage-radio-group">
+              <label for = "list_all" >List All EOIs(give nothing)</label>
               <input type = "radio" id = "list_all" name = "eoi_managment_type" value ="list_all"><br>
               
               <label for = "">List EOIs for a job position (give job refrence number)</label>
@@ -42,12 +42,17 @@
               
               <label for = "">List EOIs for a applicant(give firstname or lastname or both)</label>
               <input type = "radio" id = "list_applicant" name = "eoi_managment_type" value ="list_applicant"><br>
-            <!--</div>-->  
-            <label for = "extra_info">enter required info</label>
-            <input type = "text" id = "extra_info" name = "extra_info">
-          
-          
-            <input type = 'submit'>
+
+             
+            </div> 
+            <div class = "manage-radio-group">
+              <label for = "extra_info">enter required info</label>
+              <input type = "text" id = "extra_info" name = "extra_info"> <br>
+              
+              
+            <div>
+            <input type = 'submit' class = "manage-submit">
+
           </form>
         </section>
   </main>

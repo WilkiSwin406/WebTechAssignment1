@@ -500,9 +500,21 @@ table, th, td {
 
 /*manage page*/
 .manage-radio-group {
+
     display: grid; /* make the class elements display as a grid*/
-    grid-template-columns: 1fr 1fr;
-    /*grid-template-rows: 20% 20% 20% 20%;*/
+    grid-template-columns: auto auto 50%;
+    padding: 5px;
+
+}
+.manage-radio-group label{
+    grid-column-start: 1;
+}
+.manage-radio-group input{
+    grid-column-start: 2;
+}
+
+.manage-submit{
+
 }
 /*end manage page*/
       
