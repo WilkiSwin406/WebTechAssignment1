@@ -1,14 +1,30 @@
+<?php // print errors if they are there
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+?>
+
+<?php
+require_once('settings.php');
+$conn = mysqli_connect($host, $user, $pwd, $sql_db);
+
+if (!$conn){
+    die("Database connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT * FROM jobs";
+$result = $conn->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Connor Wright">
-    <meta name="description" content="Descriptions of open job positions at CyberBytes">
-    <meta name="keywords" content="job listings, cyberbytes, applications, employment, software development">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Connor Wright" />
+    <meta name="description" content="Descriptions of open job positions at CyberBytes" />
+    <meta name="keywords" content="job listings, cyberbytes, applications, employment, software development" />
     <title>CyberBytes Available Positions</title>
 
-    <link href="../styles/styles.css" rel="stylesheet">
+    <link href="../styles/styles.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -26,126 +42,39 @@
         <h4>Sharon Spoon, Cloud Engineer (employed 6 years)</h4>
         <p><em>"CyberBytes has been a really good job for me. There's many opportunities for growth and you're paid quite well in the as a senior employee. On top of that, you're allowed a lot of freedom with your work, so the job doesn't really get boring. I haven't really worked with any company before that feels like they actually care about their employees, but CyberBytes feels like a family. In only fourteen more years I'll have worked here long enough to take my eight days of long-service leave!"</em></p>
     </aside>
-        
-    <section class="jobs-body">
 
-        <h2>Careers</h2>
-        <p>At CyberBytes, our hospitality extends to more than just our customers! As one of the CyberBytes crew, you'll be afforded a range of unparalleled employee benefits, including 3 vacation days per year, 2 days of leave in case of illness or emergencies, access to our state-of-the-art on-site employee restrooms, and two spa vouchers per year! So, <em><u>what are you waiting for?</u></em> Join us at CyberBites, and thrive!</p>
-        <section class="jobs-tiles">
-
-            <!-- GenAI used as a template for all job descriptions. Website used was https://chatgpt.com, and the prompt was: "Hi, ChatGPT! Can you please write me one short paragraph (for each position) that would serve as a position description for the following jobs: Cloud Engineer, Database Engineer, Data Analyst, UX Designer" -->
-            <section class="jobs-descriptions" id="cloud-engineer"> <!-- each job listing is given its own section, which all share a class but are given unique ids -->
-                <h2>Cloud Engineer, Level 1 - CLE01</h2> <!-- reference number format: three-letter abbreviation of job title, two numbers that signify seniority level -->
-                <p>As one of our cloud engineers, you will be responsible for designing, implementing and maintaining our cloud-based infrastructure and services. You must ensure that our cloud systems are scalable, secure and reliable at all times. Your position will primarily consist of maintenance work as a level one employee.</p>
-                <ul> <!-- an unordered list is used to give a detailed breakdown on each position described and to more easily categorise requirements --> 
-                    <li>Salary range: $100,000 - $105,100</li>
-                    <li>Supervisor position: Cloud Engineer, Level 3 (CLE03)</li>
-                    <li>Essential requirements:</li>
-                    <li>
-                        <ol> <!-- an ordered list is used here to display essential requirements and preferable qualities, ordered by importance -->
-                            <li>2+ years of experience in cloud platforms (AWS, Azure, or GCP)</li>
-                            <li>Strong understanding of networking, security, and cloud architecture</li>
-                            <li>Proficient in scripting languages (e.g., Python, Bash)</li>
-                        </ol>
-                    </li>
-                    <li>Preferable:</li>
-                    <li>
-                        <ol>
-                            <li>Experience with containerization (Docker, Kubernetes)</li>
-                            <li>Knowledge of cost optimization strategies in the cloud</li>
-                            <li>Familiarity with Infrastructure as Code (IaC) tools such as Terraform</li>
-                        </ol>
-                    </li>
-                </ul>
-
-                <p class="applylink">Click <a href="apply.html" class="applylink">here</a> to apply!</p>
-
-            </section>
-
-            <section class="jobs-descriptions" id="database-engineer"> <!-- all other job descriptions share the same basic structure as each other, with minimal differences -->
-                <h2>Database Engineer, Level 1 - DBE01</h2>
-                <p>As a database analyst, you will be responsible for creating efficient database systems, optimizing queries, and implementing backup and recovery strategies for our databases. Your position will also include handling scaling and integration tasks, as well as database migration if necessary. As a level one employee, you will primarily focus on maintenance.</p>
-                <ul>
-                    <li>Salary range: $105,000 - $115,000</li>
-                    <li>Supervisor position: Database Engineer, Level 3 (DBE03)</li>  
-                    <li>Essential requirements:</li>
-                    <li>
-                        <ol>
-                            <li>2+ years of experience in data analysis or related field</li>
-                            <li>Proficiency in data visualization tools (e.g., Power BI, Tableau, Looker)</li>
-                            <li>Understanding of statistical analysis and data interpretation</li>
-                        </ol>
-                    </li>
-                    <li>Preferable:</li>
-                    <li>
-                                                <ol>
-                            <li>Proficiency in Python or R for data analysis</li>
-                            <li>Experience with big data tools (e.g., Spark, Hadoop)</li>
-                        </ol>
-                    </li>
-                </ul>
-
-                <p class="applylink">Click <a href="apply.html" class="applylink">here</a> to apply!</p>
-
-            </section>
-
-            <section class="jobs-descriptions" id="data-analyst">
-                <h2>Data Analyst, Level 2 - DTA02</h2>
-                <p>As a data analyst, you will be responsible for collecting, processing and analysing data in order to assist management to make informed decisions. You will identify trends, patterns and insights through data visualisation and statistical techniques. As a level two employee, you will also be expected to prepare reports for stakeholders and management, as well as participate in meetings in order to share your findings.</p>
-                <ul>
-                    <li>Salary range: $110,000 - $135,000</li>
-                    <li>Supervisor position: Data Analyst, Level 3 (DTA03)</li>
-                    <li>Essential requirements:</li>
-                    <li>
-                        <ol>
-                            <li>4+ years of experience in database development and administration</li>
-                            <li>Proficiency in SQL and database design principles</li>
-                            <li>Experience with at least one RDBMS (e.g., PostgreSQL, MySQL, SQL Server)</li>
-                        </ol>
-                    </li>
-                    <li>Preferable:</li>
-                    <li>
-                        <ol>
-                            <li>Experience with NoSQL databases (e.g., MongoDB, Cassandra)</li>
-                            <li>Certification in database technologies</li>
-                        </ol>
-                    </li>
-                </ul>
-
-                <p class="applylink">Click <a href="apply.html" class="applylink">here</a> to apply!</p>
-
-            </section>
-
-            <section class="jobs-descriptions" id="ux-designer">
-                <h2>UX Designer, Level 1 - UXD01</h2>
-                <p>As one of our UX designers, you will be responsible for the user experience, including tasks such as upkeep of our website and app's user interface and designing prototypes or wireframes. You must ensure that your work is functional, readable and aesthetically pleasing. As a level one employee, you will primarily undertake smaller UI design tasks directly under your supervisor.</p>
-                <ul>
-                    <li>Salary range: $90,000 - $105,000</li>
-                    <li>Supervisor position: UX Designer, Level 3 (UXD03)</li>
-                    <li>Essential requirements:</li>
-                    <li>
-                        <ol>
-                            <li>2+ years of experience in UX design</li>
-                            <li>Strong portfolio demonstrating UX processes and final designs</li>
-                            <li>Knowledge of responsive and accessible design principles</li>
-                        </ol>
-                    </li>
-                    <li>Preferable:</li>
-                    <li>
-                        <ol>
-                            <li>Experience working in Agile or cross-functional teams</li>
-                            <li>Familiarity with HTML/CSS and design handoff to developers</li>
-                        </ol>
-                    </li>
-                </ul>
-
-                <br>
-
-                <p class="applylink">Click <a href="apply.html" class="applylink">here</a> to apply!</p>
-
-            </section>
+    <section class="jobs-tiles">
+            <?php if ($result && $result->num_rows > 0): ?> <!-- see if there are job listings -->
+            <!-- Fetch_assoc() is a neat way to loop through a db and turn data into an assoc-array -->
+                <?php while ($row = $result->fetch_assoc()): ?> <!-- loop through each job -->
+                    <section class="jobs-descriptions"> <!-- For each job make a new section -->
+                        <!-- specialchars stops XSS attacks - add this to report -->
+                        <h2><?php echo htmlspecialchars($row['Position']) . " - " . htmlspecialchars($row['JRN']); ?></h2>
+                        <p><?php echo nl2br(htmlspecialchars($row['Description'])); ?></p> <!-- literally stands for new line to br -->
+                        <ul> <!--start a unordered list -->
+                            <li><strong>Salary range:</strong> <?php echo htmlspecialchars($row['Salary_range']); ?></li>
+                            <li><strong>Essential requirements:</strong>
+                                <ol> <!--start an ordered list-->
+                                    <?php foreach (explode("\n", $row['Requirements']) as $req): ?> <!--explode splits a string into an array based on a delimiter-->
+                                        <li><?php echo htmlspecialchars($req); ?></li> 
+                                    <?php endforeach; ?>
+                                </ol>
+                            </li>
+                            <li><strong>Preferable:</strong>
+                                <ol>
+                                    <?php foreach (explode("\n", $row['Preferences']) as $pref): ?>
+                                        <li><?php echo htmlspecialchars($pref); ?></li>
+                                    <?php endforeach; ?>
+                                </ol>
+                            </li>
+                        </ul>
+                        <p class="applylink">Click <a href="apply.php?job_id=<?php echo $row['id']; ?>" class="applylink">here</a> to apply!</p>
+                    </section>
+                <?php endwhile; ?>
+            <?php else: ?>
+                <p>No job listings found.</p>
+            <?php endif; ?>
         </section>
-    </section>
 
    <?php include 'footer.inc'?>;
 </body>
