@@ -27,11 +27,11 @@
 
             if (empty($email)) {
                 echo "Error: Your email is required.<br>";
-            }
-
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) { # this is a check to make sure that the email entered is formatted as an email should be, adding a second check to the pattern already contained within the form entry field
+            } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) { # this is a check to make sure that the email entered is formatted as an email should be, adding a second check to the pattern already contained within the form entry field
                 echo "Error: Invalid email format.<br>";
             }
+
+            
 
             if (empty($dob)) {
                 echo "Error: Please enter your date of birth.<br>";
@@ -94,9 +94,25 @@
                         echo "Error: Your postcode $addressPostcode does not match your state, $addressState.<br>";
                     }
                     break;
-                default: # default case only occurs in case of no state being entered, which should not be possible due to the input being a drop-down box
-                    echo "Error: Please enter a state.<br>";
             }
+
+            if (!(ctype_alpha($fname))) { # this function and the one directly after use a ctype function to make sure an entered first and last name uses no numbers or special characters
+                echo "Error: Your first name must contain only alphabetical characters.<br>";
+            }
+
+            if (!(ctype_alpha($lname))) {
+                echo "Error: Your last name must contain only alphabetical characters.<br>";
+            }
+
+            if (strlen($phone) > 12 || strlen($phone) < 8) { # here we use strlen() to get the length of the entered phone number. This one is important because the patterns on the HTML side don't prevent the phone number from being the wrong length like they do with the applicant's names and street/suburb names
+                echo "Error: Your phone number should be between 8 and 12 characters long, including spaces.<br>";
+            }
+
+            if (!(only_numbers_or_spaces($phone))) {
+                echo "Error: Your phone number should contain only numbers and spaces.<br>";
+            }
+
+
 
             // echo "$fname<br>";
             // echo "$lname<br>";
@@ -118,12 +134,26 @@
 
   }
 
-        function clean_input($data) {
+        function clean_input($data) { # this function trims all the unnecessary details off of any data
             $data = trim($data);
             $data = stripslashes($data);
             $data = htmlspecialchars($data);
             return $data;
     }
+
+        function only_numbers_or_spaces($string) { # this function checks to see if a string contains only numerical digits or spaces, returning true if it does
+            $length = strlen($string);
+            while ($length >= 0) {
+                $position = strlen($string) - $length;
+                $char = substr($string, $position, 1);
+                if (!(ctype_space($char) || ctype_digit($char) || empty($char))) {
+                    return False;
+                }
+                $length = $length - 1;
+            }
+        return True;
+    }
+
     ?> 
 </body>
 </html>
