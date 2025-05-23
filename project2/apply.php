@@ -9,7 +9,7 @@
 <?php include 'header.inc'?>;
         <br>
         <br>
-<form action="http://mercury.swin.edu.au/it000000/formtest.php" method="post"> <!-- everything inside the form tag is a form and the method of post sends all informtation collected to the action link-->
+<form action="process_eoi.php" method="post" novalidate="novalidate"> <!-- everything inside the form tag is a form and the method of post sends all informtation collected to the action link-->
     <fieldset> <!-- everything inside a field set tag is seperated from the rest of the page and other field sets for data management and UX-->
             <!--the title of the field set is defined by legend-->
             <legend>Applicant Details</legend>
