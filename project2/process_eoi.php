@@ -18,6 +18,7 @@
             $addressPostcode = clean_input($_POST["Postcode"]);
             $addressState = clean_input($_POST["State"]);
             $phone = clean_input($_POST["Phone"]);
+            $skills = skills_string();
 
             
 
@@ -111,28 +112,43 @@
             if (!(only_numbers_or_spaces($phone))) {
                 echo "Error: Your phone number should contain only numbers and spaces.<br>";
             }
+            
+            if (empty($skills)) {
+                echo "Error: Please select at least one technical skill.<br>";
+            }
+
+            if (isset($_POST["Other-skills-checkbox"])) {
+                if (isset($_POST["Other-skills"])) {
+                    $otherSkills = clean_input($_POST["Other-skills"]);
+                    if (empty($otherSkills)) {
+                        echo "Error: 'Other Skills' checkbox is selected, but no text is entered in the relevant text box. Please either enter your skills into the text box, or uncheck the checkbox.<br>";
+                    }
+                } else {
+                    echo "Error: 'Other Skills' checkbox is selected, but no text is entered in the relevant text box. Please either enter your skills into the text box, or uncheck the checkbox.<br>";
+                }
+            } else {
+                $otherSkills = "No other skills entered";
+            }
+
+            }
 
 
 
-            // echo "$fname<br>";
-            // echo "$lname<br>";
-            // echo "$email<br>";
-            // echo "$dob<br>";
-            // echo "$addressStreet<br>";
-            // echo "$addressSuburb<br>";
-            // echo "$addressPostcode<br>";
-            // echo "$addressState<br>";
-            // echo "$phone<br>";
-            // echo "$gender<br>";
+
+            echo "$fname<br>";
+            echo "$lname<br>";
+            echo "$email<br>";
+            echo "$dob<br>";
+            echo "$addressStreet<br>";
+            echo "$addressSuburb<br>";
+            echo "$addressPostcode<br>";
+            echo "$addressState<br>";
+            echo "$phone<br>";
+            echo "$gender<br>";
+            echo "$skills<br>";
+            echo "$otherSkills<br>";
 
 
-
-
-
-
-
-
-  }
 
         function clean_input($data) { # this function trims all the unnecessary details off of any data
             $data = trim($data);
@@ -153,6 +169,39 @@
             }
         return True;
     }
+
+        function skills_string() {
+            $string = "";
+            if (isset($_POST["Cloud-Platform"])) {
+                $string = "$string Cloud Platform Knowledge,";
+            }
+            if (isset($_POST["Networking"])) {
+                $string = "$string Digital Networking Knowledge,";
+            }
+            if (isset($_POST["Security"])) {
+                $string = "$string Digital Security Knowledge,";
+            }
+            if (isset($_POST["Virtualisation"])) {
+                $string = "$string Virtualisation,";
+            }
+            if (isset($_POST["Programming"])) {
+                $string = "$string Programming,";
+            }
+            if (isset($_POST["Database"])) {
+                $string = "$string Data Base Creation & Management,";
+            }
+            if (isset($_POST["Automation-Tools"])) {
+                $string = "$string Automation Tools,";
+            }
+            if (isset($_POST["UI-UX"])) {
+                $string = "$string UI & UX Understanding,";
+            }
+            if (!(empty($string))) {
+                $string = substr($string, 0, -1);
+            }
+            return $string;
+        }
+
 
     ?> 
 </body>

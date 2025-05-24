@@ -38,9 +38,7 @@ CREATE TABLE `eoi` (
   `Postcode` int(4) NOT NULL,
   `Email` varchar(99) NOT NULL,
   `Phone` int(12) NOT NULL,
-  `Skill1` varchar(60) DEFAULT NULL,
-  `Skill2` varchar(60) DEFAULT NULL,
-  `Skill3` varchar(60) DEFAULT NULL,
+  `Skills` varchar(100) NOT NULL,
   `OtherSkills` text DEFAULT NULL,
   `Status` set('NEW','CURRENT','FINAL') NOT NULL DEFAULT 'NEW'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

@@ -61,7 +61,7 @@
                 <label for="Postcode">Postcode:</label>
                 <input type="text" name="Postcode" id="Postcode" required="required" pattern="[0-9]{4}">
                 <label for="Phone">Phone Number:</label>
-                <input type="text" name="Phone" id="Phone" required="required" placeholder="#No Spaces or Country Tags" pattern="[0-9]{8-12}">
+                <input type="text" name="Phone" id="Phone" required="required" placeholder="eg. 9555 4829" pattern="[0-9]{8-12}">
                 <label for="State">State:</label>
                 <select name="State" id="State"> <!-- this creates a drop down menu, each option and value is a seperate opton-->
                     <option value="ACT">ACT</option>
@@ -94,7 +94,7 @@
               <label for="Networking">Digital Networking Knowledge</label>
               <input type="checkbox" id="Networking" name="Networking" value="Yes"> <br>
               <label for="Security">Digital Security Knowledge</label>
-              <input type="checkbox" id="Security" name="Security" value="yes"> <br>
+              <input type="checkbox" id="Security" name="Security" value="Yes"> <br>
               <label for="Virtualisation">Virtualisation</label>
               <input type="checkbox" id="Virtualisation" name="Virtualisation" value="Yes"> <br>
               <label for="Programming">Programming</label>
@@ -105,8 +105,9 @@
               <input type="checkbox" id="Automation-Tools" name="Automation-Tools" value="Yes"> <br>
               <label for="UI-UX">UI & UX understanding</label>
               <input type="checkbox" id="UI-UX" name="UI-UX" value="Yes" > <br>
-              <Label for="Other-skills">Other Skills</Label>
-              <textarea name="Other-skills" id="Other-skills"  placeholder="#Comma separated list"></textarea>
+              <label for="Other-skills-checkbox">Other Skills (Please check box, then write in text box)</label>
+              <input type="checkbox" id="Other-skills-checkbox" name="Other-skills-checkbox" value="Yes" > <br>
+              <textarea name="Other-skills" id="Other-skills"  placeholder="Your skills here..."></textarea>
         </div>
     </fieldset>
 
