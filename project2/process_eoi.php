@@ -21,7 +21,6 @@ if (!$conn){
             $fname = clean_input($_POST["Fname"]);
             $lname = clean_input($_POST["Lname"]);
             $email = clean_input($_POST["Email"]);
-            $gender = clean_input($_POST["Gender"]);
             $dob = clean_input($_POST["DOB"]);
             $addressStreet = clean_input($_POST["Street"]);
             $addressSuburb = clean_input($_POST["Suburb"]);
@@ -167,7 +166,29 @@ if (!$conn){
 
             }
 
-            # create a table / check if inputs validated
+            if (isset($_POST["Gender"])) {
+                $gender = clean_input($_POST["Gender"]);
+                switch ($gender) {
+                    case 'Male':
+                        $gender = 'MALE';
+                        break;
+                    case 'Female':
+                        $gender = 'FEMALE';
+                        break;
+                    case 'Non-Binary':
+                        $gender = 'NON-BINARY';
+                        break;
+                    case 'Other':
+                        $gender = 'OTHER';
+                        break;
+                    case 'Rather-not-Say':
+                        $gender = 'PREFER NOT TO SAY';
+                        break;
+                }
+            } else {
+                $gender = 'PREFER NOT TO SAY';
+            }
+
             
             if ($validationSuccessful) {
                 $sql = "INSERT INTO eoi (JRN, FirstName, LastName, Gender, DOB, StreetAddress, Suburb, State, Postcode, Email, Phone, Skills, OtherSkills)
