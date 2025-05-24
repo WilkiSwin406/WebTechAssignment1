@@ -268,6 +268,7 @@ if (!$conn){
             }
             if (!(empty($string))) {
                 $string = substr($string, 0, -1);
+                $string = substr($string, 1)
             }
             return $string;
         }
