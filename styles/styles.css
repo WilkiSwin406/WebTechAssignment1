@@ -576,9 +576,6 @@ table, th, td {
     grid-column-start: 2;
 }
 
-.manage-submit{
-
-}
 /*end manage page*/
       
 aside { /*  this aside floats to the right, is set to 25% of the width of the page, and has a consistent colour scheme with the blues and greys of the rest of our website   */
