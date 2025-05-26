@@ -537,9 +537,9 @@ table, th, td {
     opacity: 80%;
 }
 .home-images p{/*sets colour and style of text in images*/
-    color: #448493;
+    color: #000000;
     font-weight: bold;
-    -webkit-text-fill-color: #76e6ff;/*webkit stuff allows for an outline around letter*/ 
+    -webkit-text-fill-color: #1bcbf3;/*webkit stuff allows for an outline around letter*/ 
     -webkit-text-stroke: 0.5px;
     text-align: center;
 }
