@@ -13,13 +13,17 @@ if (!$conn){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processing...</title>
+    <title>Thank you for applying to CyberBytes!</title>
+    <link href="../styles/styles.css" rel="stylesheet" />
 </head>
 <body>
+    <?php include 'header.inc'; ?>
+    <fieldset> <!-- this is just to make the error messages/confirmation message look neater -->
     <?php
+
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $fname = clean_input($_POST["Fname"]);
-            $lname = clean_input($_POST["Lname"]);
+            $fname = clean_input($_POST["Fname"]); # all of the input data from the apply.php form is run through a cleaning function which removes 
+            $lname = clean_input($_POST["Lname"]); # trailing whitespace and special html characters
             $email = clean_input($_POST["Email"]);
             $dob = clean_input($_POST["DOB"]);
             $addressStreet = clean_input($_POST["Street"]);
@@ -29,9 +33,7 @@ if (!$conn){
             $phone = clean_input($_POST["Phone"]);
             $skills = skills_string();
             $jrn = clean_input($_POST["Job"]);
-            $validationSuccessful = True;
-
-            // TODO: REDIRECT DIRECT LINKS FROM PROCESS_EOI.PHP TO APPLY.PHP
+            $validationSuccessful = True; # this validationSuccessful boolean is True by default, but will be switched to False if any of the input checks fail
 
             if (empty($fname) || empty($lname)) {
                 echo "Error: Your full name is required.<br>";
@@ -164,9 +166,13 @@ if (!$conn){
                 $otherSkills = "No other skills entered";
             }
 
+            } else { # if the submitted form method is anything other than "POST", redirect back to apply.php. this should only occur if someone reaches process_eoi.php without submitting the form on apply.php, i.e. through direct link.
+                echo "Redirecting...";
+                header("Location: apply.php", true, 301);  
+                exit();  
             }
 
-            if (isset($_POST["Gender"])) {
+            if (isset($_POST["Gender"])) { # this snippet translates the gender input into something readable by our sql database
                 $gender = clean_input($_POST["Gender"]);
                 switch ($gender) {
                     case 'Male':
@@ -185,40 +191,47 @@ if (!$conn){
                         $gender = 'PREFER NOT TO SAY';
                         break;
                 }
-            } else {
+            } else { # if no gender option is selected, default
                 $gender = 'PREFER NOT TO SAY';
             }
 
             
-            if ($validationSuccessful) { # TODO: MAKE THIS CODE ADD AN EOI TABLE IF ONE DOESN'T EXIST
-                $sql = "INSERT INTO eoi (JRN, FirstName, LastName, Gender, DOB, StreetAddress, Suburb, State, Postcode, Email, Phone, Skills, OtherSkills)
+            if ($validationSuccessful) { # this code creates an eoi table if one does not already exist in the database
+                $sql = "CREATE TABLE IF NOT EXISTS eoi                
+                        (`EOINumber` int(5) NOT NULL AUTO_INCREMENT,
+                        `JRN` varchar(6) NOT NULL,
+                        `FirstName` varchar(20) NOT NULL,
+                        `LastName` varchar(20) NOT NULL,
+                        `Gender` set('MALE','FEMALE','NON-BINARY','OTHER','PREFER NOT TO SAY') NOT NULL,
+                        `DOB` date NOT NULL,
+                        `StreetAddress` varchar(40) NOT NULL,
+                        `Suburb` varchar(40) NOT NULL,
+                        `State` set('VIC','ACT','TAS','QLD','NT','SA','WA','NSW') NOT NULL,
+                        `Postcode` int(4) NOT NULL,
+                        `Email` varchar(99) NOT NULL,
+                        `Phone` int(12) NOT NULL,
+                        `Skills` varchar(100) NOT NULL,
+                        `OtherSkills` text NOT NULL,
+                        `Status` set('NEW','CURRENT','FINAL') NOT NULL DEFAULT 'NEW',
+                        primary key (EOINumber)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;";
+
+                if ($conn->query($sql) === TRUE) { # the following code inserts the data into the table, returning a message stating the user's EOI Number
+                    
+                    $sql2 = "INSERT INTO eoi (JRN, FirstName, LastName, Gender, DOB, StreetAddress, Suburb, State, Postcode, Email, Phone, Skills, OtherSkills)
                         VALUES ('$jrn', '$fname', '$lname', '$gender', '$dob', '$addressStreet', '$addressSuburb', '$addressState', '$addressPostcode', '$email', '$phone', '$skills', '$otherSkills')";
-                if ($conn->query($sql) === TRUE) {
-                    $eoiID = $conn->insert_id; 
-                    echo "Your expression of interest form has been submitted, with the ID " . $eoiID . ". Have a nice day!";
+                    if ($conn->query($sql2) === TRUE) {
+                        $eoiID = $conn->insert_id; 
+                        echo "Your expression of interest form has been submitted, with the ID " . $eoiID . ". Have a nice day!";
+                    } else {
+                        echo "Error: " . $sql2 . "<br>" . $conn->error;
+                    }
                 } else {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                 }
 
             } else {
-                echo "Please click <a href='apply.php'>here</a> to return to the previous page.<br>";
+                echo "Please click <a href='apply.php'>here</a> to return to the previous page.<br>"; # hyperlink back to apply.php is provided if validation fails for any reason
             }
-
-            // TODO: REMOVE THIS
-            // echo "$fname<br>";
-            // echo "$lname<br>";
-            // echo "$email<br>";
-            // echo "$dob<br>";
-            // echo "$addressStreet<br>";
-            // echo "$addressSuburb<br>";
-            // echo "$addressPostcode<br>";
-            // echo "$addressState<br>";
-            // echo "$phone<br>";
-            // echo "$gender<br>";
-            // echo "$skills<br>";
-            // echo "$otherSkills<br>";
-
-
 
         function clean_input($data) { # this function trims all the unnecessary details off of any data
             $data = trim($data);
@@ -240,7 +253,7 @@ if (!$conn){
         return True;
     }
 
-        function skills_string() {
+        function skills_string() { # this function creates a string in the format "skill1, skill2, skill3, etc" to store in the database as a varchar
             $string = "";
             if (isset($_POST["Cloud-Platform"])) {
                 $string = "$string Cloud Platform Knowledge,";
@@ -266,14 +279,14 @@ if (!$conn){
             if (isset($_POST["UI-UX"])) {
                 $string = "$string UI & UX Understanding,";
             }
-            if (!(empty($string))) {
+            if (!(empty($string))) { # this lil section cuts off the first and last characters from the string. all it really does is make it look nicer in the database, otherwise it would begin with a space and end with a comma
                 $string = substr($string, 0, -1);
                 $string = substr($string, 1);
             }
             return $string;
         }
 
-
     ?> 
+</fieldset>
 </body>
 </html>

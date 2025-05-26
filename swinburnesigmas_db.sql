@@ -75,8 +75,6 @@ INSERT INTO `jobs` (`id`, `JRN`, `Description`, `Salary_range`, `Position`, `Req
 -- Dumping data for table `eoi`
 --
 
-INSERT INTO `eoi` (`EOINumber`, `JRN`, `FirstName`, `LastName`, `Gender`, `DOB`, `StreetAddress`, `Suburb`, `State`, `Postcode`, `Email`, `Phone`, `Skills`, `OtherSkills`, `Status`) VALUES
-(7, 'DTA02', 'Connor', 'Wright', 'MALE', '2004-01-21', '26 Riviera St', 'Mentone', 'VIC', 3194, 'connorawright999@gmail.com', 416963332, ' Digital Networking Knowledge, Virtualisation, Automation Tools, UI & UX Understanding', '3-time hotdog eating champion', 'NEW');
 
 --
 -- Indexes for dumped tables
