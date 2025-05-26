@@ -10,6 +10,6 @@
         <a href="apply.php">Apply</a>
         <a href="about.php">About</a>
         <a href="enhancements/enhancements.php">Admin</a>
-        <a href="manage/manage.php">Manage</a>
+        <a href="manage.php">Manage</a>
     </footer>
 </html>
