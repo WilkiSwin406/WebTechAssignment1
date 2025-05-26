@@ -1,6 +1,6 @@
 <html>
   <nav class="nav-links">
-            <a href="admin.php">Admin</a>
+            
             <a href="index.php">Index</a>
             <a href="jobs.php">Jobs</a>
             <a href="apply.php">Apply</a>
