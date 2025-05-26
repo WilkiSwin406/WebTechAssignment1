@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     if ($username === 'admin' && $password === 'reallysecure') {
         $_SESSION['user'] = $username;
-        header('Location: admindb.php');
+        header('Location: manage.php');
         exit();
     } else {
         echo '<p style="color:red;">Invalid Administrator details.</p>';
