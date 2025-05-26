@@ -190,11 +190,11 @@ if (!$conn){
             }
 
             
-            if ($validationSuccessful) {
+            if ($validationSuccessful) { # TODO: MAKE THIS CODE ADD AN EOI TABLE IF ONE DOESN'T EXIST
                 $sql = "INSERT INTO eoi (JRN, FirstName, LastName, Gender, DOB, StreetAddress, Suburb, State, Postcode, Email, Phone, Skills, OtherSkills)
                         VALUES ('$jrn', '$fname', '$lname', '$gender', '$dob', '$addressStreet', '$addressSuburb', '$addressState', '$addressPostcode', '$email', '$phone', '$skills', '$otherSkills')";
                 if ($conn->query($sql) === TRUE) {
-                    $eoiID = $conn->insert_id;
+                    $eoiID = $conn->insert_id; 
                     echo "Your expression of interest form has been submitted, with the ID " . $eoiID . ". Have a nice day!";
                 } else {
                     echo "Error: " . $sql . "<br>" . $conn->error;
