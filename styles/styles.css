@@ -154,6 +154,61 @@ label { /* move labels to the left side of the page */
 .input-check ::placeholder  {
     font-size: x-small ; /*for placeholder tags in the input-check class, make the font size extra small */
 }
+
+/* Flynn's Admin page */
+
+.admin-page .container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.admin-page .box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    min-width: 300px;
+    max-width: 400px;
+    box-shadow: 0 0 8px #aaa;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.admin-page h2 {
+    margin-top: 0;
+}
+
+.admin-page label {
+    display: block;
+    margin-top: 10px;
+}
+
+.admin-page input[type=text],
+.admin-page input[type=password] {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    box-sizing: border-box;
+}
+
+.admin-page input[type=submit] {
+    margin-top: 15px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.error-msg {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.success-msg {
+    color: green;
+    margin-bottom: 10px;
+}
+
+
 /*Benjamin's About Page*/
 
 /* Flex: Refers to the layout mode that arranges elements in a row or column with alignment and spacing features*/

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../settings.php"; // Contains DB credentials: $host, $user, $pwd, $sql_db
+require_once "../settings.php";
 
 // Create or resume login attempt session
 if (!isset($_SESSION['login_attempts'])) {
@@ -12,19 +12,19 @@ if (!isset($_SESSION['lockout_time'])) {
 
 $now = time();
 
-// Check if currently locked out
+// Check if the users locked out
 if ($now < $_SESSION['lockout_time']) {
     $_SESSION['login_error'] = "Too many failed attempts. Please try again after 2 minutes.";
     header("Location: admin.php");
     exit();
 }
 
-// Handle form submission
+// form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
 
-    // Connect to the database
+    // Connect to the data base
     $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 
     if (!$conn) {
@@ -33,10 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
-    // Sanitize inputs
-    $username = mysqli_real_escape_string($conn, $username);
-    $password = mysqli_real_escape_string($conn, $password);
-
+    // sql query
     $query = "SELECT * FROM admins WHERE username='$username' AND password='$password'";
     $result = mysqli_query($conn, $query);
 

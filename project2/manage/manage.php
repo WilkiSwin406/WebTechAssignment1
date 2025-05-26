@@ -2,15 +2,10 @@
 session_start();
 
 if (empty($_SESSION['admin_logged_in'])) {
-    // Not logged in, redirect to login page
-    $_SESSION['message'] = "Please login to access this page.";
-    header("Location: admin.php");
-    exit;
+    $_SESSION['message'] = "Please login to access the data management page.";
+    header("Location: ../enhancements/admin.php");  // Adjust path if needed
+    exit();
 }
-
-// Optional: If needed, show a message for logged-in users
-// echo "<p>You are already logged in as admin.</p>";
-// previous line used for debugging to make sure the code was working
 ?>
 
 <!DOCTYPE html>
