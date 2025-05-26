@@ -185,17 +185,40 @@ if (!$conn){
                         $gender = 'PREFER NOT TO SAY';
                         break;
                 }
-            } else {
+            } else { # if no gender option is selected, default
                 $gender = 'PREFER NOT TO SAY';
             }
 
             
             if ($validationSuccessful) { # TODO: MAKE THIS CODE ADD AN EOI TABLE IF ONE DOESN'T EXIST
-                $sql = "INSERT INTO eoi (JRN, FirstName, LastName, Gender, DOB, StreetAddress, Suburb, State, Postcode, Email, Phone, Skills, OtherSkills)
-                        VALUES ('$jrn', '$fname', '$lname', '$gender', '$dob', '$addressStreet', '$addressSuburb', '$addressState', '$addressPostcode', '$email', '$phone', '$skills', '$otherSkills')";
+                $sql = "CREATE TABLE IF NOT EXISTS eoi                
+                        (`EOINumber` int(5) NOT NULL AUTO_INCREMENT,
+                        `JRN` varchar(6) NOT NULL,
+                        `FirstName` varchar(20) NOT NULL,
+                        `LastName` varchar(20) NOT NULL,
+                        `Gender` set('MALE','FEMALE','NON-BINARY','OTHER','PREFER NOT TO SAY') NOT NULL,
+                        `DOB` date NOT NULL,
+                        `StreetAddress` varchar(40) NOT NULL,
+                        `Suburb` varchar(40) NOT NULL,
+                        `State` set('VIC','ACT','TAS','QLD','NT','SA','WA','NSW') NOT NULL,
+                        `Postcode` int(4) NOT NULL,
+                        `Email` varchar(99) NOT NULL,
+                        `Phone` int(12) NOT NULL,
+                        `Skills` varchar(100) NOT NULL,
+                        `OtherSkills` text NOT NULL,
+                        `Status` set('NEW','CURRENT','FINAL') NOT NULL DEFAULT 'NEW',
+                        primary key (EOINumber)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;";
+
                 if ($conn->query($sql) === TRUE) {
-                    $eoiID = $conn->insert_id; 
-                    echo "Your expression of interest form has been submitted, with the ID " . $eoiID . ". Have a nice day!";
+                    
+                    $sql2 = "INSERT INTO eoi (JRN, FirstName, LastName, Gender, DOB, StreetAddress, Suburb, State, Postcode, Email, Phone, Skills, OtherSkills)
+                        VALUES ('$jrn', '$fname', '$lname', '$gender', '$dob', '$addressStreet', '$addressSuburb', '$addressState', '$addressPostcode', '$email', '$phone', '$skills', '$otherSkills')";
+                    if ($conn->query($sql2) === TRUE) {
+                        $eoiID = $conn->insert_id; 
+                        echo "Your expression of interest form has been submitted, with the ID " . $eoiID . ". Have a nice day!";
+                    } else {
+                        echo "Error: " . $sql2 . "<br>" . $conn->error;
+                    }
                 } else {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                 }
