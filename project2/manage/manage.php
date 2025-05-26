@@ -2,8 +2,8 @@
 session_start();
 
 if (empty($_SESSION['admin_logged_in'])) {
-    $_SESSION['message'] = "Please login to access the data management page.";
-    header("Location: ../enhancements/admin.php");  // Adjust path if needed
+    $_SESSION['message'] = "log in to access data base";
+    header("Location: ../enhancements/enhancements.php");  // Adjust path if needed
     exit();
 }
 ?>
