@@ -13,12 +13,14 @@ if (!$conn){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank you for applying to CyberBites!</title>
+    <title>Thank you for applying to CyberBytes!</title>
     <link href="../styles/styles.css" rel="stylesheet" />
 </head>
 <body>
-    <fieldset>
+    <?php include 'header.inc'; ?>
+    <fieldset> <!-- this is just to make the error messages/confirmation message look neater -->
     <?php
+
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $fname = clean_input($_POST["Fname"]); # all of the input data from the apply.php form is run through a cleaning function which removes 
             $lname = clean_input($_POST["Lname"]); # trailing whitespace and special html characters
@@ -228,7 +230,7 @@ if (!$conn){
                 }
 
             } else {
-                echo "Please click <a href='apply.php'>here</a> to return to the previous page.<br>";
+                echo "Please click <a href='apply.php'>here</a> to return to the previous page.<br>"; # hyperlink back to apply.php is provided if validation fails for any reason
             }
 
         function clean_input($data) { # this function trims all the unnecessary details off of any data
@@ -251,7 +253,7 @@ if (!$conn){
         return True;
     }
 
-        function skills_string() {
+        function skills_string() { # this function creates a string in the format "skill1, skill2, skill3, etc" to store in the database as a varchar
             $string = "";
             if (isset($_POST["Cloud-Platform"])) {
                 $string = "$string Cloud Platform Knowledge,";
@@ -277,13 +279,12 @@ if (!$conn){
             if (isset($_POST["UI-UX"])) {
                 $string = "$string UI & UX Understanding,";
             }
-            if (!(empty($string))) {
+            if (!(empty($string))) { # this lil section cuts off the first and last characters from the string. all it really does is make it look nicer in the database, otherwise it would begin with a space and end with a comma
                 $string = substr($string, 0, -1);
                 $string = substr($string, 1);
             }
             return $string;
         }
-
 
     ?> 
 </fieldset>
