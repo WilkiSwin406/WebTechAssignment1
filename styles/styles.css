@@ -505,10 +505,17 @@ table, th, td {
 }
 
 /*home page*/
+.home-body{
+
+    /*background-image: url('images/logo.png');*/
+    color: #00bfff;
+}
+
+
 .home-box{/*creates a section seperated from the white background useful for deviding up page*/
     background-color: #acacac;
     border: 1px solid black;
-    padding: 15px;
+    padding: 500000px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 5px;
