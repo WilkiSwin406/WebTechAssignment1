@@ -506,16 +506,17 @@ table, th, td {
 
 /*home page*/
 .home-body{
-
-    /*background-image: url('images/logo.png');*/
-    color: #00bfff;
+    background-image: url('images/logo.png');
+    background-repeat: no-repeat;
+    margin:auto;
+    background-position: center;
 }
 
 
 .home-box{/*creates a section seperated from the white background useful for deviding up page*/
     background-color: #acacac;
     border: 1px solid black;
-    padding: 500000px;
+    padding: 15px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 5px;
@@ -537,9 +538,9 @@ table, th, td {
     opacity: 80%;
 }
 .home-images p{/*sets colour and style of text in images*/
-    color: #000000;
+    color: #1bcbf3;
     font-weight: bold;
-    -webkit-text-fill-color: #1bcbf3;/*webkit stuff allows for an outline around letter*/ 
+    -webkit-text-fill-color: #000000;/*webkit stuff allows for an outline around letter*/ 
     -webkit-text-stroke: 0.5px;
     text-align: center;
 }
