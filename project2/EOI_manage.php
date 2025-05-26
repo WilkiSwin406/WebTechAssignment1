@@ -188,18 +188,7 @@
                 }
             
             
-            
-            
-            
-            
-            
-            }else
-            {
-
             }
-        }else
-        {
-
         }
     }
     echo "</section>
