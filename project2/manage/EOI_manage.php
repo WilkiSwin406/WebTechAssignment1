@@ -1,10 +1,10 @@
 <?php
-    #require_once ("settings.php");
-    #$conn = mysqli_connect($host, $user, $pwd, $sql_db);
+    require_once ("../settings.php");
+    $conn = mysqli_connect($host, $user, $pwd, $sql_db);
     
-    #if (!$conn){
-    #    die("Database connection failed: ".mysqil_connect_error());
-    #}
+    if (!$conn){
+        die("Database connection failed: ".mysqil_connect_error());
+    }
 
 
     if ($_SERVER["request_method"] = "POST")
@@ -14,7 +14,7 @@
             if ($_POST["eoi_managment_type"] == "list_all")
             {
                 echo "list all";
-                #$query = "SELECT * FROM ";
+                $query = "SELECT * FROM ";
             }elseif (isset($_POST["extra_info"]) and $_POST["extra_info"] != null)
             {
                 switch ($_POST["eoi_managment_type"])

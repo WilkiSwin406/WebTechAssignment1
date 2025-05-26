@@ -41,7 +41,7 @@ CREATE TABLE `eoi` (
   `Email` varchar(99) NOT NULL,
   `Phone` int(12) NOT NULL,
   `Skills` varchar(100) NOT NULL,
-  `OtherSkills` text DEFAULT NOT NULL,
+  `OtherSkills` text NOT NULL,
   `Status` set('NEW','CURRENT','FINAL') NOT NULL DEFAULT 'NEW'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
