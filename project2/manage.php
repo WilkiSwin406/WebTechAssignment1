@@ -71,4 +71,5 @@ if (empty($_SESSION['admin_logged_in'])) {
           </form>
         </section>
   </main>
+  <?php include 'footer.inc'; ?>
 </body>

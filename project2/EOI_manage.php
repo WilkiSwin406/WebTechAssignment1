@@ -205,4 +205,5 @@
     echo "</section>
     </main>
     </body>";
+    include 'footer.inc';
 ?>
