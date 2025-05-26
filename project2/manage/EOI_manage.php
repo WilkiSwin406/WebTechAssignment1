@@ -14,7 +14,7 @@
             if ($_POST["eoi_managment_type"] == "list_all")
             {
                 echo "list all";
-                $query = "SELECT * FROM ";
+                $query = "SELECT EOInumber,firstname, FROM eoi";
             }elseif (isset($_POST["extra_info"]) and $_POST["extra_info"] != null)
             {
                 switch ($_POST["eoi_managment_type"])
