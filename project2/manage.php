@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (empty($_SESSION['admin_logged_in'])) {
+    $_SESSION['message'] = "log in to access data base";
+    header("Location: ../enhancements/enhancements.php");  // Adjust path if needed
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
