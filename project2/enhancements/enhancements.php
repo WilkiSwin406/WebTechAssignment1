@@ -172,7 +172,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register']) && !empty
         <a href="../apply.php">Apply</a>
         <a href="../about.php">About</a>
         <a href="enhancements.php">Admin</a>
-        <a href="../manage/manage.php">Manage</a>
+        <a href="manage/manage.php">Manage</a>
         <?php if (!empty($_SESSION['admin_logged_in'])): ?>
                 <a href="enhancements.php?logout=1">Logout</a>
             <?php endif; ?>
