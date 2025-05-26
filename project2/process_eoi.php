@@ -13,13 +13,15 @@ if (!$conn){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processing...</title>
+    <title>Thank you for applying to CyberBites!</title>
+    <link href="../styles/styles.css" rel="stylesheet" />
 </head>
 <body>
+    <fieldset>
     <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $fname = clean_input($_POST["Fname"]);
-            $lname = clean_input($_POST["Lname"]);
+            $fname = clean_input($_POST["Fname"]); # all of the input data from the apply.php form is run through a cleaning function which removes 
+            $lname = clean_input($_POST["Lname"]); # trailing whitespace and special html characters
             $email = clean_input($_POST["Email"]);
             $dob = clean_input($_POST["DOB"]);
             $addressStreet = clean_input($_POST["Street"]);
@@ -29,9 +31,7 @@ if (!$conn){
             $phone = clean_input($_POST["Phone"]);
             $skills = skills_string();
             $jrn = clean_input($_POST["Job"]);
-            $validationSuccessful = True;
-
-            // TODO: REDIRECT DIRECT LINKS FROM PROCESS_EOI.PHP TO APPLY.PHP
+            $validationSuccessful = True; # this validationSuccessful boolean is True by default, but will be switched to False if any of the input checks fail
 
             if (empty($fname) || empty($lname)) {
                 echo "Error: Your full name is required.<br>";
@@ -164,9 +164,13 @@ if (!$conn){
                 $otherSkills = "No other skills entered";
             }
 
+            } else { # if the submitted form method is anything other than "POST", redirect back to apply.php. this should only occur if someone reaches process_eoi.php without submitting the form on apply.php, i.e. through direct link.
+                echo "Redirecting...";
+                header("Location: apply.php", true, 301);  
+                exit();  
             }
 
-            if (isset($_POST["Gender"])) {
+            if (isset($_POST["Gender"])) { # this snippet translates the gender input into something readable by our sql database
                 $gender = clean_input($_POST["Gender"]);
                 switch ($gender) {
                     case 'Male':
@@ -190,7 +194,7 @@ if (!$conn){
             }
 
             
-            if ($validationSuccessful) { # TODO: MAKE THIS CODE ADD AN EOI TABLE IF ONE DOESN'T EXIST
+            if ($validationSuccessful) { # this code creates an eoi table if one does not already exist in the database
                 $sql = "CREATE TABLE IF NOT EXISTS eoi                
                         (`EOINumber` int(5) NOT NULL AUTO_INCREMENT,
                         `JRN` varchar(6) NOT NULL,
@@ -209,7 +213,7 @@ if (!$conn){
                         `Status` set('NEW','CURRENT','FINAL') NOT NULL DEFAULT 'NEW',
                         primary key (EOINumber)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;";
 
-                if ($conn->query($sql) === TRUE) {
+                if ($conn->query($sql) === TRUE) { # the following code inserts the data into the table, returning a message stating the user's EOI Number
                     
                     $sql2 = "INSERT INTO eoi (JRN, FirstName, LastName, Gender, DOB, StreetAddress, Suburb, State, Postcode, Email, Phone, Skills, OtherSkills)
                         VALUES ('$jrn', '$fname', '$lname', '$gender', '$dob', '$addressStreet', '$addressSuburb', '$addressState', '$addressPostcode', '$email', '$phone', '$skills', '$otherSkills')";
@@ -226,22 +230,6 @@ if (!$conn){
             } else {
                 echo "Please click <a href='apply.php'>here</a> to return to the previous page.<br>";
             }
-
-            // TODO: REMOVE THIS
-            // echo "$fname<br>";
-            // echo "$lname<br>";
-            // echo "$email<br>";
-            // echo "$dob<br>";
-            // echo "$addressStreet<br>";
-            // echo "$addressSuburb<br>";
-            // echo "$addressPostcode<br>";
-            // echo "$addressState<br>";
-            // echo "$phone<br>";
-            // echo "$gender<br>";
-            // echo "$skills<br>";
-            // echo "$otherSkills<br>";
-
-
 
         function clean_input($data) { # this function trims all the unnecessary details off of any data
             $data = trim($data);
@@ -298,5 +286,6 @@ if (!$conn){
 
 
     ?> 
+</fieldset>
 </body>
 </html>
