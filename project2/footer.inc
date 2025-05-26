@@ -5,7 +5,7 @@
         <p></p>
         <a href="mailto:webtechprojectteam@gmail.com">Contact us</a>
         <p></p>
-        <a href="index.php">Index</a>
+        <a href="index.php">Home</a>
         <a href="jobs.php">Jobs</a>
         <a href="apply.php">Apply</a>
         <a href="about.php">About</a>
